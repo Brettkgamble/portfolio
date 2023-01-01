@@ -306,6 +306,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/analytics@npm:^0.1.6":
+  version: 0.1.6
+  resolution: "@vercel/analytics@npm:0.1.6"
+  peerDependencies:
+    react: ^16.8||^17||^18
+  checksum: 4428e27778cac2ddb1b55fb2e499e04cbe7ddb76dac4fbcbc1e992729da03166807f72c28664ab0addad7223217baef55b5b7b5210a25967c3652b6b2c07d0be
+  languageName: node
+  linkType: hard
+
 "acorn-jsx@npm:^5.3.2":
   version: 5.3.2
   resolution: "acorn-jsx@npm:5.3.2"
@@ -1970,6 +1979,7 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@next/font": 13.1.1
+    "@vercel/analytics": ^0.1.6
     eslint: 8.31.0
     eslint-config-next: 13.1.1
     next: 13.1.1
