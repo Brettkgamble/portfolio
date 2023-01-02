@@ -5,7 +5,7 @@ import TextArea from "../components/text";
 export default function Page() {
     return (
         <main className="flex flex-col justify-between items-center p-24  min-h-screen">
-            <div className="px-3 pt-10 w-3/5">
+            <div className="px-3 pt-10 w-full md:w-4/5 lg:w-3/5 xl:w-2/5">
                 <form className="flex flex-col items-center w-full mx-auto">
                     <Input id="name" name="name" placeholder="Your Name" label="Your Name"/>
                     <Input id="email" name="email" placeholder="email@email.com" label="Your Email"/>
