@@ -1,6 +1,6 @@
 // https://www.youtube.com/watch?v=uqwZFnrCLj0
-import Input from '../components/input';
-import TextArea from "../components/text";
+import Input from '../../components/input';
+import TextArea from "../../components/text";
 
 export default function Page() {
     return (
