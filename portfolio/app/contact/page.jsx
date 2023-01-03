@@ -1,4 +1,5 @@
 // https://www.youtube.com/watch?v=uqwZFnrCLj0
+import '../globals.css';
 import Input from '../../components/input';
 import TextArea from "../../components/text";
 
