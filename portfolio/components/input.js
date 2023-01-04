@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-export default function Input({id, name, label, placeholder, ...props}) {
+export default function Input({id, name, label, placeholder,value, onChange, ...props}) {
     return (
         <div className="w-full mb-3">
             <label className="block text-lg" htmlFor={id}>{label}</label>
             <input
+                value={value}
+                onChange={onChange}
                 autoComplete="off"
                 type="text"
                 id={id}
@@ -23,6 +25,8 @@ Input.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
     label: PropTypes.string,
-    placeholder: PropTypes.string
+    placeholder: PropTypes.string,
+    value: PropTypes.string,
+    onChange: () => PropTypes.void
 }
 
