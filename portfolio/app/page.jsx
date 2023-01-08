@@ -1,19 +1,23 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from './page.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
       <main className="flex flex-col justify-between items-center p-6 h-screen bg-black">
-          <div className="text-white">Test Content</div>
-          {/*<div className={styles.description}>*/}
-          {/*  <p>*/}
-          {/*    Website and Application Development by Brett Gamble&nbsp;*/}
-          {/*  </p>*/}
-          {/*</div>*/}
-
+          <div className="text-sm max-w-1100 w-full z-2 font-mono">
+            <p className="absolute inline m-0 p-4 bg-callout-rgb rounded-xl border border-solid border-callout-border-rgb">
+              Website and Application Development by Brett Gamble&nbsp;
+            </p>
+          </div>
+  {/*           display: grid;*/}
+  {/*grid-template-columns: repeat(4, minmax(25%, auto));*/}
+  {/*width: var(--max-width);*/}
+  {/*max-width: 100%;*/}
+  {/*        <div className="grid grid-col-4 max-w-1100 w-full">*/}
+  {/*            Test*/}
+  {/*        </div>*/}
       {/*<div className={styles.grid}>*/}
       {/*  <h2 className={inter.className}>*/}
       {/*      My stack is <span>-&gt;</span>*/}

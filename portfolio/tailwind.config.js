@@ -8,7 +8,20 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    maxWidth:{
+      '1100': '1100px',
+    },
+    extend: {
+      colors: {
+        'callout-rgb': 'rgb(20, 20, 20)',
+        'callout-border-rgb': 'rgba(108, 108, 108,.3)',
+        'loc-select': '#007ca7'
+      },
+      zIndex: {
+        '2': '2',
+      }
+
+    },
   },
   plugins: [
       require('@tailwindcss/forms')
