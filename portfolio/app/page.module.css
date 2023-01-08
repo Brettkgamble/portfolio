@@ -181,7 +181,8 @@
 
   .grid {
     grid-template-columns: 1fr;
-    margin-bottom: 120px;
+    margin-top: 80px;
+    /*margin-bottom: 120px;*/
     max-width: 320px;
     text-align: center;
   }
@@ -195,7 +196,7 @@
   }
 
   .center {
-    padding: 8rem 0 6rem;
+    padding: 2rem 0 2rem;
   }
 
   .center::before {

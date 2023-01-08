@@ -19,6 +19,9 @@ module.exports = {
       },
       zIndex: {
         '2': '2',
+      },
+      gridTemplateColumns:{
+        'page-4': 'repeat(4, minmax(25%, auto))'
       }
 
     },
