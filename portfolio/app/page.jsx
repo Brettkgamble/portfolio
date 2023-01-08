@@ -7,7 +7,8 @@ export default function Home() {
   return (
       <main className="flex flex-col justify-between items-center p-6 h-screen bg-black">
           <div className="text-sm max-w-1100 w-full z-2 font-mono">
-            <p className="absolute inline m-0 p-4 bg-callout-rgb rounded-xl border border-solid border-callout-border-rgb">
+            <p className="absolute inline m-0 p-4 bg-callout-rgb
+                        lg:rounded-xl lg:border lg:border-solid lg:border-callout-border-rgb">
               Website and Application Development by Brett Gamble&nbsp;
             </p>
           </div>
