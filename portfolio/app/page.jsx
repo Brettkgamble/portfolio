@@ -8,13 +8,6 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
     return (
         <div className="h-screen bg-black text-white">
-            <div className="flex flex-col items-center max-w-1100 lg:items-start p-6">
-                  <div className="lg:border lg:rounded-xl lg:border-callout-border-rgb lg:px-4 lg:py-4">
-                    <p className="font-mono">
-                      Website and Application Development by Brett Gamble&nbsp;
-                    </p>
-                  </div>
-            </div>
             <div className="grid grid-cols-12">
                 <div className="col-span-12 pl-8 pt-8 sm:pl-16 md:pl-32 lg:pl-48">
                     <span className={inter.className}>
@@ -124,10 +117,10 @@ export default function Home() {
                 </div>
                 <div className="col-span-12 text-center px-4 mb-8">
                     <a
-                      href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+                      href="/contact"
                       className="px-4 py-10 rounded-xl border border-solid bg-card-rgb border-card-border ease-in duration-200"
                       className="px-4 py-10 "
-                      target="_blank"
+                      target=""
                       rel="noopener noreferrer"
                     >
                         <h2 className="block text-xl font-semibold mb-2">
