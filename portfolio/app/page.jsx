@@ -34,7 +34,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="col-span-12 text-center my-12 z-50 ">
+                <div className="col-span-12 text-center mt-16 mb-12">
                     <div className="flex relative justify-center items-center">
                         <Image
                             src="/next.svg"
@@ -56,7 +56,7 @@ export default function Home() {
                           />
                     </div>
                 </div>
-                <div className="col-span-12 text-center my-12">
+                <div className="col-span-12 text-center mt-12 mb-4">
                     <div className="flex relative justify-center items-center ">
                         <Image
                             // className={styles.logo}
@@ -68,7 +68,7 @@ export default function Home() {
                           />
                     </div>
                 </div>
-                <div className="col-span-12 text-center px-4 pt-8">
+                <div className="col-span-12 text-center px-4 pt-4">
                     <a
                       href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
                       className="px-4 py-10 rounded-xl border border-solid bg-card-rgb border-card-border ease-in duration-200"
