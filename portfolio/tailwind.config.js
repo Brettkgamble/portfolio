@@ -15,6 +15,8 @@ module.exports = {
       colors: {
         'callout-rgb': 'rgb(20, 20, 20)',
         'callout-border-rgb': 'rgba(108, 108, 108,.3)',
+        'card-rgb': 'rgb(100, 100, 100, 0.15)',
+        'card-border': 'rgb(200, 200, 200, 0.15)',
         'loc-select': '#007ca7'
       },
       zIndex: {
