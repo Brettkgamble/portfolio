@@ -37,8 +37,8 @@ export default function Home() {
                 <div className="col-span-12 text-center my-12 z-50 ">
                     <div className="flex relative justify-center items-center">
                         <Image
-                            className={styles.logo}
-                            src="/n.svg"
+                            // className={styles.logo}
+                            src="/next.svg"
                             alt="Next.js Logo"
                             width={120}
                             height={37}
