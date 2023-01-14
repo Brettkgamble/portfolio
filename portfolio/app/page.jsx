@@ -33,11 +33,11 @@ export default function Home() {
                           />
                     </div>
                 </div>
-                <div className="col-span-12 text-center mt-12 z-10">
+                <div className="col-span-12 text-center my-12 z-10">
                     <div className="flex relative justify-center items-center ">
                         <Image
                             className={styles.logo}
-                            src="/next.svg"
+                            src="/n.svg"
                             alt="Next.js Logo"
                             width={120}
                             height={37}
@@ -45,11 +45,11 @@ export default function Home() {
                           />
                     </div>
                 </div>
-                <div className="col-span-12 text-center mt-12 z-10">
+                <div className="col-span-12 text-center my-12 z-10">
                     <div className="flex relative justify-center items-center ">
                         <Image
                             className={styles.logo}
-                            src="/vercel.svg"
+                            src="/v.svg"
                             alt="Vercel Logo"
                             width={120}
                             height={37}
@@ -57,7 +57,7 @@ export default function Home() {
                           />
                     </div>
                 </div>
-                <div className="col-span-12 text-center mt-12">
+                <div className="col-span-12 text-center my-12">
                     <div className="flex relative justify-center items-center ">
                         <Image
                             // className={styles.logo}
