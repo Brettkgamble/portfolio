@@ -52,7 +52,13 @@ export default function MainNavigation(props) {
                                        <a href="/">Home</a>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
+                                       <a href="/">Resume</a>
+                                   </li>
+                                   <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
                                        <a href="/about">About</a>
+                                   </li>
+                                   <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
+                                       <a href="/about">Sites</a>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
                                        <a href="/contact">Contact</a>
