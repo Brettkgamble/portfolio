@@ -33,8 +33,9 @@ export default function Home() {
                           />
                     </div>
                 </div>
-                <div className="col-span-12 text-center my-12 z-50 bg-gray-500">
-                    <div className="flex relative justify-center items-center ">
+
+                <div className="col-span-12 text-center my-12 z-50 ">
+                    <div className="flex relative justify-center items-center">
                         <Image
                             className={styles.logo}
                             src="/n.svg"
