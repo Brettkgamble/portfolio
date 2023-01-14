@@ -122,7 +122,7 @@ export default function Home() {
                         </div>
                     </a>
                 </div>
-                <div className="col-span-12 text-center px-4 ">
+                <div className="col-span-12 text-center px-4 mb-8">
                     <a
                       href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
                       className="px-4 py-10 rounded-xl border border-solid bg-card-rgb border-card-border ease-in duration-200"
