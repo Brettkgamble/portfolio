@@ -33,7 +33,7 @@ export default function Home() {
                           />
                     </div>
                 </div>
-                <div className="col-span-12 text-center mt-12">
+                <div className="col-span-12 text-center mt-12 z-10">
                     <div className="flex relative justify-center items-center ">
                         <Image
                             className={styles.logo}
@@ -45,7 +45,7 @@ export default function Home() {
                           />
                     </div>
                 </div>
-                <div className="col-span-12 text-center mt-12">
+                <div className="col-span-12 text-center mt-12 z-10">
                     <div className="flex relative justify-center items-center ">
                         <Image
                             className={styles.logo}
