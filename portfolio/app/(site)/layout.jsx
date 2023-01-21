@@ -1,6 +1,6 @@
 import './globals.css';
-import { AnalyticsWrapper } from "../components/analytics";
-import MainNavigation from "../components/navigation/mainNavigation";
+import { AnalyticsWrapper } from "../../components/analytics";
+import MainNavigation from "../../components/navigation/mainNavigation";
 
 export default function RootLayout({ children }) {
   return (

@@ -2,8 +2,8 @@
 'use client'
 import '../globals.css';
 import React, { useState } from 'react';
-import Input from '../../components/input';
-import TextArea from "../../components/text";
+import Input from '../../../components/input';
+import TextArea from "../../../components/text";
 
 export default function Page() {
   const [name, setName] = useState('');
@@ -28,9 +28,9 @@ export default function Page() {
   };
 
     return (
-        <main className="flex flex-col justify-between items-center p-24  min-h-screen">
-            <div className="px-3 pt-10 w-full md:w-4/5 lg:w-3/5 xl:w-2/5">
-                <form className="flex flex-col items-center w-full mx-auto" onSubmit={handleSubmit}>
+        <main className="flex flex-col justify-between items-center p-8 sm:p-16 md:p-24  min-h-screen">
+            <div className="w-full sm:w-4/5 lg:w-3/5 xl:w-2/5">
+                <form className="flex flex-col items-center mx-auto" onSubmit={handleSubmit}>
                     <Input
                         id="name"
                         name="name"

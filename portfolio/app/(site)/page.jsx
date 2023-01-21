@@ -64,7 +64,7 @@ export default function Home() {
             <div className="grid grid-cols-1 pb-16 mt-16 md:grid-cols-3 md:gap-4 md:px-4 lg:mt-48 ">
                 <div className="grid grid-cols-12">
                     <div className="col-span-12">
-                        <Link href="/"
+                        <Link href="/portfolio/pages"
                               // className="px-4 py-10 rounded-xl border border-solid bg-card-rgb border-card-border ease-in duration-200"
                         >
                             {/*<h2 className="block text-xl font-semibold mb-2">*/}
@@ -81,7 +81,7 @@ export default function Home() {
                 </div>
                 <div className="grid grid-cols-12">
                     <div className="col-span-12">
-                        <Link href="/"
+                        <Link href="/portfolio/pages"
                               // className="px-4 py-10 rounded-xl border border-solid bg-card-rgb border-card-border ease-in duration-200"
                         >
                             {/*<h2 className="block text-xl font-semibold mb-2">*/}
@@ -98,7 +98,7 @@ export default function Home() {
                 </div>
                 <div className="grid grid-cols-12">
                     <div className="col-span-12">
-                        <Link href="/"
+                        <Link href="/portfolio/pages"
                               // className="px-4 py-10 rounded-xl border border-solid bg-card-rgb border-card-border ease-in duration-200"
                         >
                             {/*<h2 className="block text-xl font-semibold mb-2">*/}

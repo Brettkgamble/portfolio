@@ -4,6 +4,7 @@
 import React from 'react';
 import { useState } from "react";
 import PropTypes from "prop-types";
+import Link from 'next/link';
 
 export default function MainNavigation(props) {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -49,19 +50,39 @@ export default function MainNavigation(props) {
                            <nav className="flex">
                                <ul className="flex-col w-full text-black absolute top-14 left-0 h-128">
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
-                                       <a href="/">Home</a>
+                                       <Link
+                                           href="/"
+                                       >
+                                           Home
+                                       </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
-                                       <a href="/">Resume</a>
+                                       <Link
+                                           href="/resume"
+                                       >
+                                           Resume
+                                       </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
-                                       <a href="/about">About</a>
+                                       <Link
+                                           href="/about"
+                                       >
+                                           About
+                                       </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
-                                       <a href="/about">Sites</a>
+                                      <Link
+                                           href="/sites"
+                                       >
+                                           Sites
+                                       </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
-                                       <a href="/contact">Contact</a>
+                                       <Link
+                                           href="/contact"
+                                       >
+                                           Contact
+                                       </Link>
                                    </li>
                                </ul>
                            </nav>
@@ -81,19 +102,39 @@ export default function MainNavigation(props) {
                            <div className="ml-auto mr-16">
                                <ul className="flex p-0 text-white">
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 hover:font-bold">
-                                       Home
+                                       <Link
+                                           href="/"
+                                       >
+                                           Home
+                                       </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 hover:font-bold">
-                                       Resume
+                                       <Link
+                                           href="/resume"
+                                       >
+                                           Resume
+                                       </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 hover:font-bold">
-                                       About
+                                       <Link
+                                           href="/about"
+                                       >
+                                           About
+                                       </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 hover:font-bold">
-                                       Sites
+                                       <Link
+                                           href="/sites"
+                                       >
+                                           Sites
+                                       </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 hover:font-bold">
-                                       Contact
+                                       <Link
+                                           href="/contact"
+                                       >
+                                           Contact
+                                       </Link>
                                    </li>
                                </ul>
                            </div>
