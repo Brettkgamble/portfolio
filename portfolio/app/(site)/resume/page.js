@@ -1,5 +1,5 @@
 export default function Resume() {
     return (
-        <div>This is the resume page</div>
+        <div className="text-white pl-2">This is the resume page</div>
     )
 }
