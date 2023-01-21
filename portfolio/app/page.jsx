@@ -14,7 +14,7 @@ export default function Home() {
                         <span className="inline-block">My stack is <span className="inline-block align-middle"><HiArrowRight /></span></span>
                     </span>
                 </div>
-                <div className="col-span-12 text-center mt-12">
+                <div className="col-span-12 text-center mt-12 md:col-span-6 lg:col-span-3 xl:col-start-2 xl:col-span-2">
                     <div className="flex relative justify-center items-center ">
                         <Image
                             // className={styles.logo}
@@ -27,7 +27,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="col-span-12 text-center mt-16 mb-12">
+                <div className="col-span-12 text-center mt-16 mb-12 md:col-span-6 md:mt-24 lg:col-span-3 xl:col-start-4 xl:col-span-2">
                     <div className="flex relative justify-center items-center">
                         <Image
                             src="/next.svg"
@@ -38,7 +38,7 @@ export default function Home() {
                           />
                     </div>
                 </div>
-                <div className="col-span-12 text-center my-12 z-10">
+                <div className="col-span-12 text-center my-12 z-10 md:col-span-6 lg:col-span-3 lg:mt-24 xl:col-start-7 xl:col-span-2">
                     <div className="flex relative justify-center items-center ">
                         <Image
                             src="/vercel.svg"
@@ -49,7 +49,7 @@ export default function Home() {
                           />
                     </div>
                 </div>
-                <div className="col-span-12 text-center mt-12 mb-4">
+                <div className="col-span-12 text-center mt-12 mb-4 md:col-span-6 lg:col-span-3 lg:mt-24 xl:col-start-9 xl:col-span-2">
                     <div className="flex relative justify-center items-center ">
                         <Image
                             // className={styles.logo}

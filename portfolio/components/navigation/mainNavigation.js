@@ -12,7 +12,7 @@ export default function MainNavigation(props) {
         <>
            <nav className="z-50 w-full bg-nav-rgba items-end justify-between pt-2 pb-4 border-b border-blue-100 ">
                {/*Small screen*/}
-               <div className="flex sm:hidden">
+               <div className="flex md:hidden">
                    <div className="flex flex-col items-center max-w-1100 lg:items-start p-6">
                        <div className="lg:border lg:rounded-xl lg:border-callout-border-rgb lg:px-4 lg:py-4">
                            <p className="font-mono text-white">
@@ -69,7 +69,7 @@ export default function MainNavigation(props) {
                    </section>
                </div>
                    {/* Full Screen */}
-                   <div className="flex hidden sm:flex">
+                   <div className="flex hidden md:flex">
                        <nav className="flex relative h-14 w-full items-center pl-2 pr-2">
                            <div className="flex flex-col items-center max-w-1100 lg:items-start p-6">
                                <div className="lg:border lg:rounded-xl lg:border-callout-border-rgb lg:px-4 lg:py-4">
