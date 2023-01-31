@@ -5,7 +5,7 @@
     "dataset": "production"
   },
   "project": {
-    "name": "Find A Fitness Pro"
+    "name": "Brett Gamble Portfolio"
   },
   "plugins": [
     "@sanity/base",
