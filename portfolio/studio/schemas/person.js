@@ -44,17 +44,21 @@ export default {
         sources: [mediaAssetSource],
         hotspot: true,
       }
+    },
+    {
+      name: 'address',
+      title: 'Address',
+      type: 'array',
+      description: 'Typically the private address',
+      of : [
+        {
+          type: 'reference',
+          to:[{ type: 'address'}]
+        }
+      ]
 
     }
-    // {
-    //   name: 'image',
-    //   title: 'Image',
-    //   type: 'mainImage',
-    //   description: "Must be 340px wide and 280px high. A 1.2 H to W ratio",
-    //   options: {
-    //     hotspot: true
-    //   }
-    // },
+
     //   {
     //         name: 'address',
     //         title: 'Primary Address',
