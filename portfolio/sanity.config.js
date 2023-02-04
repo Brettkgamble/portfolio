@@ -4,18 +4,23 @@ import { visionTool } from '@sanity/vision';
 import schemas from './schemas/schema';
 import {media, mediaAssetSource} from 'sanity-plugin-media'
 
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
+
 export default defineConfig({
+  basePath: "/studio",
+  name: "portfolio",
   title: "Brett Gamble Portfolio",
-  projectId: "52vufthe",
-  dataset: "production",
+  projectId, //: "52vufthe",
+  dataset, // : "production",
   plugins: [deskTool(), visionTool(), media()],
-  tools: (prev) => {
-    // 👇 Uses environment variables set by Vite in development mode
-    if (import.meta.env.DEV) {
-      return prev
-    }
-    return prev.filter((tool) => tool.name !== 'vision')
-  },
+  // tools: (prev) => {
+  //   // 👇 Uses environment variables set by Vite in development mode
+  //   if (import.meta.env.DEV) {
+  //     return prev
+  //   }
+  //   return prev.filter((tool) => tool.name !== 'vision')
+  // },
   form: {
     // Don't use this plugin when selecting files only (but allow all other enabled asset sources)
     file: {
