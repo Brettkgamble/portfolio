@@ -1926,6 +1926,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@heroicons/react@npm:^2.0.14":
+  version: 2.0.14
+  resolution: "@heroicons/react@npm:2.0.14"
+  peerDependencies:
+    react: ">= 16"
+  checksum: d1623865c04e2bedc1ae370ca0a305bb0c775c7db171e29d03afc3032598105b7e8c9290e7d6b34a5f334e2a2c92e8e2aac1c5e89d1ea1fb7073cce6e03a7f16
+  languageName: node
+  linkType: hard
+
 "@hookform/resolvers@npm:2.0.0-beta.3":
   version: 2.0.0-beta.3
   resolution: "@hookform/resolvers@npm:2.0.0-beta.3"
@@ -8351,6 +8360,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
+    "@heroicons/react": ^2.0.14
     "@next/font": 13.1.1
     "@portabletext/react": ^2.0.1
     "@sanity/cli": ^3.2.5
