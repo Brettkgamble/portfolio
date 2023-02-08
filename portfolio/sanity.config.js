@@ -5,6 +5,7 @@ import schemas from './schemas/schema';
 import {media, mediaAssetSource} from 'sanity-plugin-media';
 import { myTheme } from './theme';
 import StudioNavbar from '../portfolio/components/navigation/StudioNavbar';
+import Logo from '../portfolio/components/navigation/logo';
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
@@ -41,7 +42,7 @@ export default defineConfig({
   },
   studio: {
     components: {
-      // logo: Logo,
+      logo: Logo,
       navbar: StudioNavbar
     }
   },

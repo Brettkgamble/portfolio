@@ -4,6 +4,9 @@ const nextConfig = {
     appDir: true,
       esmExternals: 'loose'
   },
+    images: {
+      domains: ["links.papareact.com"]
+    },
    webpack(config) {
     config.experiments = { ...config.experiments, topLevelAwait: true }
     return config
