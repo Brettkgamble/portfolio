@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity';
 import {client } from '../../../lib/sanity.client';
 
-export const query = groq `
+const query = groq `
     *[_type=='person'] {
         ...,
         address[]->
