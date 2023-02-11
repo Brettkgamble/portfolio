@@ -57,7 +57,16 @@ export default {
         }
       ]
 
-    }
+    },
+    {
+      name: 'splashImage',
+      title: 'Splash Image',
+      type: 'image',
+      options: {
+        sources: [mediaAssetSource],
+        hotspot: true,
+      }
+    },
 
     //   {
     //         name: 'address',

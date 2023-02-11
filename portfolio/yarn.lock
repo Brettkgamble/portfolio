@@ -2158,10 +2158,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/font@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/font@npm:13.1.1"
-  checksum: 468a77d3a6db4a95ece3cc99c28dcaaf6135354ad81c3954a08a6c7d977693d7b7f07ff835b972a80d25794b711d6cb6545ea55fe6bed4c624346f3524061d19
+"@next/font@npm:^13.1.6":
+  version: 13.1.6
+  resolution: "@next/font@npm:13.1.6"
+  checksum: 06499c9361d8ecf1bca47f20dfb226b6e9f77668afe967809cd8a4eade1b8620f9d723032098b2a0a9df2d2e2df96ad17e8128fcb7f494c99951ee8a61027966
   languageName: node
   linkType: hard
 
@@ -8371,7 +8371,7 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@heroicons/react": ^2.0.14
-    "@next/font": 13.1.1
+    "@next/font": ^13.1.6
     "@portabletext/react": ^2.0.1
     "@sanity/cli": ^3.2.5
     "@sanity/color": ^2.2.2

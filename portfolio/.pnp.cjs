@@ -29,7 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@heroicons/react", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:2.0.14"],\
-            ["@next/font", "npm:13.1.1"],\
+            ["@next/font", "npm:13.1.6"],\
             ["@portabletext/react", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:2.0.1"],\
             ["@sanity/cli", "npm:3.2.5"],\
             ["@sanity/color", "npm:2.2.2"],\
@@ -3517,10 +3517,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@next/font", [\
-        ["npm:13.1.1", {\
-          "packageLocation": "./.yarn/cache/@next-font-npm-13.1.1-9e6d49da60-468a77d3a6.zip/node_modules/@next/font/",\
+        ["npm:13.1.6", {\
+          "packageLocation": "./.yarn/cache/@next-font-npm-13.1.6-8de77ea8e0-06499c9361.zip/node_modules/@next/font/",\
           "packageDependencies": [\
-            ["@next/font", "npm:13.1.1"]\
+            ["@next/font", "npm:13.1.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11305,7 +11305,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["portfolio", "workspace:."],\
             ["@heroicons/react", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:2.0.14"],\
-            ["@next/font", "npm:13.1.1"],\
+            ["@next/font", "npm:13.1.6"],\
             ["@portabletext/react", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:2.0.1"],\
             ["@sanity/cli", "npm:3.2.5"],\
             ["@sanity/color", "npm:2.2.2"],\

@@ -5,7 +5,7 @@ const nextConfig = {
       esmExternals: 'loose'
   },
     images: {
-      domains: ["links.papareact.com"]
+      domains: ["links.papareact.com", "cdn.sanity.io"]
     },
    webpack(config) {
     config.experiments = { ...config.experiments, topLevelAwait: true }

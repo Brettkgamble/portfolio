@@ -11,6 +11,9 @@ module.exports = {
     "./schemas/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'roboto': ['Roboto','sans-serif']
+    },
     maxWidth:{
       '1100': '1100px',
     },
