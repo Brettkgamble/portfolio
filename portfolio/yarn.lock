@@ -2620,7 +2620,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/image-url@npm:^1.0.2":
+"@sanity/image-url@npm:^1.0.0, @sanity/image-url@npm:^1.0.2":
   version: 1.0.2
   resolution: "@sanity/image-url@npm:1.0.2"
   checksum: fbd2a6e7bd1e9b053c5a8d953c35a17f5d00dcfd792ce115fd7dfb237cbff03c7830fdf64e1ae8c6e00b58c8cabc2673f546d587454359ee02be2e2f8a39bd1e
@@ -7725,6 +7725,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-sanity-image@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "next-sanity-image@npm:5.0.0"
+  dependencies:
+    "@sanity/image-url": ^1.0.0
+  peerDependencies:
+    "@sanity/client": ^3.0.0
+    next: ^11.0.0 || ^12.0.0 || ^13.0.0
+    react: ^17.0.0 || ^18.0.0
+  checksum: d959ed0384242d7a3722301b4781503325491191a5ff67f2191546b6e7ae45bc349d419c777e9fd64693437a2ec60cbd5bdd0edb7407b7debd5621ad8332ec86
+  languageName: node
+  linkType: hard
+
 "next-sanity@npm:^4.1.2":
   version: 4.1.2
   resolution: "next-sanity@npm:4.1.2"
@@ -8391,6 +8404,7 @@ __metadata:
     eslint-config-next: 13.1.1
     next: 13.1.7-canary.7
     next-sanity: ^4.1.2
+    next-sanity-image: ^5.0.0
     postcss: ^8.4.20
     prop-types: ^15.8.1
     react: 18.2.0
