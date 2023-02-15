@@ -58,13 +58,6 @@ export default function MainNavigation(props) {
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
                                        <Link
-                                           href="/resume"
-                                       >
-                                           Resume
-                                       </Link>
-                                   </li>
-                                   <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
-                                       <Link
                                            href="/about"
                                        >
                                            About
@@ -106,13 +99,6 @@ export default function MainNavigation(props) {
                                            href="/"
                                        >
                                            Home
-                                       </Link>
-                                   </li>
-                                   <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 hover:font-bold">
-                                       <Link
-                                           href="/resume"
-                                       >
-                                           Resume
                                        </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 hover:font-bold">
