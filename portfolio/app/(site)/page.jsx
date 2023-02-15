@@ -15,7 +15,7 @@ export default function Home() {
                 </div>
                 <div className="col-span-12 text-center mt-12 md:col-span-6 lg:col-span-3 xl:col-start-2 xl:col-span-2">
                     <div className="flex relative justify-center items-center ">
-                        <a href="https://reactjs.org" target="_blank">
+                        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
                             <Image
                                 // className={styles.logo}
                                 src="/react.svg"
@@ -30,7 +30,7 @@ export default function Home() {
 
                 <div className="col-span-12 text-center mt-16 mb-12 md:col-span-6 md:mt-24 lg:col-span-3 xl:col-start-4 xl:col-span-2">
                     <div className="flex relative justify-center items-center">
-                        <a href="https://nextjs.org" target="_blank">
+                        <a href="https://nextjs.org" target="_blank" rel="noreferrer">
                             <Image
                                 src="/next.svg"
                                 alt="Next.js Logo"
@@ -43,7 +43,7 @@ export default function Home() {
                 </div>
                 <div className="col-span-12 text-center my-12 z-10 md:col-span-6 lg:col-span-3 lg:mt-24 xl:col-start-7 xl:col-span-2">
                     <div className="flex relative justify-center items-center ">
-                        <a href="https://vercel.com/" target="_blank">
+                        <a href="https://vercel.com/" target="_blank" rel="noreferrer">
                         <Image
                             src="/vercel.svg"
                             alt="Vercel Logo"
@@ -56,7 +56,7 @@ export default function Home() {
                 </div>
                 <div className="col-span-12 text-center mt-12 mb-4 md:col-span-6 lg:col-span-3 lg:mt-24 xl:col-start-10 xl:col-span-2">
                     <div className="flex relative justify-center items-center ">
-                        <a href="https://sanity.io" target="_blank">
+                        <a href="https://sanity.io" target="_blank" rel="noreferrer">
                         <Image
                             // className={styles.logo}
                             src="/sanity-logo.png"
