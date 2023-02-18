@@ -36,10 +36,48 @@ export default {
       type: 'string',
       description: 'Simple three word CTA that appears on the contact button'
     },
-    {
+    // {
+    //   name: 'image',
+    //   title:'Image',
+    //   type: 'image',
+    //   options: {
+    //     sources: [mediaAssetSource],
+    //     hotspot: true,
+    //   }
+    // },
+      {
       name: 'image',
-      title:'Image',
+      title: 'Image',
       type: 'image',
+      fields: [
+        //   {
+        //     name: 'name',
+        //     title: 'Title',
+        //     type: 'string',
+        //     description: "A name to describe the image",
+        // },
+        {
+          type: 'text',
+          name: 'alt',
+          title: 'Alternative Text',
+          description: `Some of your visitors cannot see images, be they blind, color-blind, low-sighted; 
+          alternative text is of great help for those people that can rely on it to have a good idea of 
+          what\'s on your page.`,
+          options: {
+            isHighlighted: true,
+            hotspot: true
+          }
+        },
+        {
+          type: 'url',
+          name: 'attribution_url',
+          title: 'Attribution Url',
+          description: 'Link to the creator for copyright attribution',
+          validation: Rule => Rule.uri({
+            scheme: ['http', 'https', 'mailto', 'tel']
+          })
+        }
+      ],
       options: {
         sources: [mediaAssetSource],
         hotspot: true,
