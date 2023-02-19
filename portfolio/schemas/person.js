@@ -134,6 +134,11 @@ export default {
         hotspot: true,
       }
     },
+      {
+      name: 'body',
+      title: 'Body',
+      type: 'bioBlock'
+    },
 
     //   {
     //         name: 'address',
