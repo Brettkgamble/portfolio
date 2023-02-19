@@ -1,5 +1,5 @@
 // Then import schema types from any plugins that might expose them
-import bioBlock from './bioBlock'
+import bioBlock from './bioBlock';
 import category from './category';
 import person from './person';
 import address from './address';

@@ -64,7 +64,6 @@ export default {
           alternative text is of great help for those people that can rely on it to have a good idea of 
           what\'s on your page.`,
           options: {
-            isHighlighted: true,
             hotspot: true
           }
         },
@@ -115,7 +114,6 @@ export default {
           alternative text is of great help for those people that can rely on it to have a good idea of 
           what\'s on your page.`,
           options: {
-            isHighlighted: true,
             hotspot: true
           }
         },
@@ -135,9 +133,10 @@ export default {
       }
     },
       {
-      name: 'body',
-      title: 'Body',
-      type: 'bioBlock'
+      name: 'introduction',
+      title: 'Introduction',
+      type: 'array',
+      of: [{ type: 'reference', to: {type: 'bioBlock'}}]
     },
 
     //   {
