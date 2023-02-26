@@ -30,13 +30,6 @@ const query = groq `
                 url
               }
             },
-        splashImage{
-                alt,
-              asset->{
-                _id,
-                url
-              }
-            },
         address[]->
     }
 `
