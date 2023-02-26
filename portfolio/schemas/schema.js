@@ -4,6 +4,7 @@ import category from './category';
 import organization from "./organization";
 import orgDescriptionBlock from "./orgDescriptionBlock";
 import person from './person';
+import roles from './roles';
 import address from './address';
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -13,5 +14,6 @@ export default [
     category,
     organization,
     orgDescriptionBlock,
-    person
+    person,
+    roles
 ]

@@ -405,5 +405,11 @@ export default {
                 },
           ]
         },
+        {
+          name: 'roles',
+          title: 'Roles',
+          type: 'array',
+          of: [{ type: 'reference', to: {type: 'roles'}}]
+        },
     ]
 }

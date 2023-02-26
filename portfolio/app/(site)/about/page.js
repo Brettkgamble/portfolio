@@ -14,14 +14,17 @@ const query = groq `
             bio[]
         },
         organizations[]->{
+            name,
+            roles[]->{
+                role[],
+            },
             image{
                 alt,
               asset->{
                 _id,
                 url
               }
-            },
-           name
+            }
         },
         image{
             alt,
@@ -45,7 +48,7 @@ export default function Resume() {
     const person = p[0]
     console.log('Person', person)
     return (
-        <div className="bg-white">
+        <div className="bg-white pb-32">
             <div className="flex flex-wrap ">
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
                 <div className="w-full flex-none pt-2 md:w-1/5 lg:w-1/6">
@@ -122,6 +125,21 @@ export default function Resume() {
                                 </>
                             )
                         })}
+                    </div>
+                </div>
+                <div className="w-full flex-none px-8 pt-4 md:w-2/4 lg:w-2/4">
+                    {/*<div className="text-white text-center bg-blue-600 px-4 py-2 m-2 rounded-lg">2</div>*/}
+                    <div className=" font-roboto-400 text-black md:pt-16">
+                        <div>
+                            <BlockContent
+                                style={{fontSize: "3rem"}}
+                                blocks={person.organizations[0].roles[0].role}
+                                serializers={serializers}
+                                projectId={client.projectId}
+                                dataset={client.dataset}
+                                imageOptions={{w: 500, h: 440, fit: 'max'}}
+                            />
+                        </div>
                     </div>
                 </div>
 
