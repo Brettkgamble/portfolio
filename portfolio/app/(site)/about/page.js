@@ -13,6 +13,16 @@ const query = groq `
         introduction[]->{
             bio[]
         },
+        organizations[]->{
+            image{
+                alt,
+              asset->{
+                _id,
+                url
+              }
+            },
+           name
+        },
         image{
             alt,
               asset->{
@@ -40,6 +50,7 @@ function urlFor(source) {
 export default function Resume() {
 
     const person = p[0]
+    console.log('Person', person)
     return (
         <div className="bg-white">
             <div className="flex flex-wrap ">
@@ -88,7 +99,32 @@ export default function Resume() {
                         text-start tracking-widest  ">Experience
                        <hr className="mt-2 w-14 h-2 dark:bg-blue-700"/>
                     </div>
-                    <div className="flex bg-white flex-col justify-center py-8 text-black"> Test
+                    <div className="flex pl-8 bg-white flex-col justify-center pt-8 text-black font-bold">
+                        {person.organizations.map((org, id) => {
+                            return (
+                                <>
+                                    <span key={id}>
+                                        {org.name}
+                                    </span>
+                                    <div className="flex bg-white flex-col py-2 ">
+                                        <Image
+                                            className=" w-3/6 object-left-top sm:w-2/5 md:w-3/4 lg:w-2/4"
+                                            src={
+                                                urlFor(org.image.asset.url)
+                                                .height(400)
+                                                .width(800)
+                                                .url()
+                                            }
+                                            alt={org.image.alt}
+                                            quality='100'
+                                            width="600"
+                                            height="600"
+                                            priority
+                                        />
+                                    </div>
+                                </>
+                            )
+                        })}
                     </div>
                 </div>
 

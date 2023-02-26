@@ -144,11 +144,7 @@ export default {
       description: 'These are the work experience blocks',
       title: 'Work Experience',
       // validation: Rule => Rule.unique().error('You can only have one of a category'),
-      of : [
-          {
-              type: 'reference',
-              to: [{ type: 'organization'}]
-          }
+      of : [{type: 'reference', to: { type: 'organization'}}
       ]
     },
 
