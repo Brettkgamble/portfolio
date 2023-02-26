@@ -74,6 +74,8 @@ export default function Resume() {
                             width="600"
                             height="600"
                             priority
+                            placeholder="blur"
+                            blurDataURL={person.image.asset.url}
                         />
                     </div>
                 </div>
@@ -119,7 +121,9 @@ export default function Resume() {
                                             quality='100'
                                             width="600"
                                             height="600"
-                                            priority
+                                            // priority
+                                            placeholder="blur"
+                                            blurDataURL={org.image.asset.url}
                                         />
                                     </div>
                                 </>
