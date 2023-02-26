@@ -82,13 +82,22 @@ export default function Resume() {
                     </div>
                 </div>
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
+                <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
+                <div className="w-full flex-none pt-2 md:w-1/5 lg:w-1/6">
+                    <div className="pl-8 font-roboto-600 font-bold text-black w-full uppercase
+                        text-start tracking-widest  ">Experience
+                       <hr className="mt-2 w-14 h-2 dark:bg-blue-700"/>
+                    </div>
+                    <div className="flex bg-white flex-col justify-center py-8 text-black"> Test
+                    </div>
+                </div>
 
-                <div className="w-full flex-none p-2 md:w-2/5">
-                    <div className="text-white text-center bg-blue-600 px-4 py-2 m-2 rounded-lg">3</div>
-                </div>
-                <div className="w-full flex-none p-2 md:w-2/5">
-                    <div className="text-white text-center bg-blue-600 px-4 py-2 m-2 rounded-lg">4</div>
-                </div>
+                {/*<div className="w-full flex-none p-2 md:w-2/5">*/}
+                {/*    <div className="text-white text-center bg-blue-600 px-4 py-2 m-2 rounded-lg">3</div>*/}
+                {/*</div>*/}
+                {/*<div className="w-full flex-none p-2 md:w-2/5">*/}
+                {/*    <div className="text-white text-center bg-blue-600 px-4 py-2 m-2 rounded-lg">4</div>*/}
+                {/*</div>*/}
             </div>
 
              {/*Grid Example*/}

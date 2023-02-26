@@ -138,6 +138,19 @@ export default {
       type: 'array',
       of: [{ type: 'reference', to: {type: 'bioBlock'}}]
     },
+    {
+      name: 'organizations',
+      type: 'array',
+      description: 'These are the work experience blocks',
+      title: 'Work Experience',
+      // validation: Rule => Rule.unique().error('You can only have one of a category'),
+      of : [
+          {
+              type: 'reference',
+              to: [{ type: 'organization'}]
+          }
+      ]
+    },
 
     //   {
     //         name: 'address',
