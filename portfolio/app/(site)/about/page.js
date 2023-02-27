@@ -4,6 +4,7 @@ import Image from 'next/image';
 import imageUrlBuilder from '@sanity/image-url';
 import serializers from "../../../components/serializers/serializer";
 import BlockContent from "@sanity/block-content-to-react";
+import Link from 'next/link';
 
 const builder = imageUrlBuilder(client);
 
@@ -15,7 +16,9 @@ const query = groq `
         },
         organizations[]->{
             name,
+            url,
             roles[]->{
+                period,
                 role[],
             },
             image{
@@ -73,6 +76,18 @@ export default function Resume() {
                             placeholder="blur"
                             blurDataURL={person.image.asset.url}
                         />
+                        <div className="flex pl-8 bg-white flex-col justify-center pt-8 text-black text-sm hover:text-blue-700">
+                            <ol >
+                                <li>
+                                    <a
+                                        href={person.linkedinurl.href.valueOf()}
+                                        target="_blank"
+                                    >
+                                        LinkedIn
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
                 <div className="w-full flex-none px-8 md:w-2/4 lg:w-2/4">
@@ -97,12 +112,17 @@ export default function Resume() {
                         text-start tracking-widest  ">Experience
                        <hr className="mt-2 w-14 h-2 dark:bg-blue-700"/>
                     </div>
-                    <div className="flex pl-8 bg-white flex-col justify-center pt-8 text-black font-bold">
+                    <div className="flex pl-8 bg-white flex-col justify-center pt-8 text-black font-bold hover:text-blue-700">
                         {person.organizations.map((org, id) => {
                             return (
                                 <>
                                     <span key={id}>
-                                        {org.name}
+                                        <Link
+                                            href={org.url}
+                                            target="_blank"
+                                        >
+                                            {org.name}
+                                        </Link>
                                     </span>
                                     <div className="flex bg-white flex-col py-2 ">
                                         <Image
@@ -131,6 +151,9 @@ export default function Resume() {
                     {/*<div className="text-white text-center bg-blue-600 px-4 py-2 m-2 rounded-lg">2</div>*/}
                     <div className=" font-roboto-400 text-black md:pt-16">
                         <div>
+                            <div className="text-black font-bold pb-4 -ml-4">
+                                {person.organizations[0].roles[0].period}
+                            </div>
                             <BlockContent
                                 style={{fontSize: "3rem"}}
                                 blocks={person.organizations[0].roles[0].role}

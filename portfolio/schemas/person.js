@@ -147,6 +147,24 @@ export default {
       of : [{type: 'reference', to: { type: 'organization'}}
       ]
     },
+      {
+            name: 'linkedinurl',
+            title: 'LinkedIn Url',
+            type: 'object',
+            description: "LinkedIn page",
+            fields: [
+                {
+                    title: 'Url',
+                    name: 'href',
+                    type: 'url',
+                    validation: Rule =>
+                        Rule.uri({
+                            allowRelative: true,
+                            scheme: ['https', 'http', 'mailto', 'tel']
+                        })
+                },
+            ]
+        },
 
     //   {
     //         name: 'address',

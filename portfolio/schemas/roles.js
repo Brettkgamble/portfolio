@@ -49,6 +49,11 @@ export default {
           title: 'unique name',
           type: 'string'
       },
+      {
+          name: 'period',
+          title: 'From to period',
+          type: 'string'
+      },
     {
       name:'role',
       type: 'array',
