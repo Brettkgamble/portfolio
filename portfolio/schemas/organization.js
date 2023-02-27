@@ -69,6 +69,12 @@ export default {
             }
         },
         {
+            name: 'order',
+            title: 'Order',
+            type: 'number',
+            description: "REQUIRED: The sort order",
+        },
+        {
             name: 'url',
             description: "This is a REQUIRED field and is the base URL for the organization.",
             title: 'URL',

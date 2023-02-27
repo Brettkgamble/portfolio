@@ -84,7 +84,7 @@ export default function Resume() {
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        LinkedIn
+                                        LinkedIn!
                                     </a>
                                 </li>
                             </ol>

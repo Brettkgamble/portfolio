@@ -50,6 +50,11 @@ export default {
           type: 'string'
       },
       {
+          name: 'order',
+          title: 'Display order',
+          type: 'number'
+      },
+      {
           name: 'period',
           title: 'From to period',
           type: 'string'
