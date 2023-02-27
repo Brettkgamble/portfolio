@@ -83,7 +83,7 @@ export default function Resume() {
                                         href={person.linkedinurl.href.valueOf()}
                                         target="_blank"
                                     >
-                                        LinkedIn
+                                        LinkedIn!
                                     </a>
                                 </li>
                             </ol>
