@@ -82,8 +82,9 @@ export default function Resume() {
                                     <a
                                         href={person.linkedinurl.href.valueOf()}
                                         target="_blank"
+                                        rel="noreferrer"
                                     >
-                                        LinkedIn!
+                                        LinkedIn
                                     </a>
                                 </li>
                             </ol>

@@ -1,6 +1,6 @@
 // https://codesandbox.io/s/q4mzh?file=/src/Page.js
 import React from 'react';
-import client from '../../lib/sanity.client'
+import { client } from '../../lib/sanity.client'
 import imageUrlBuilder from '@sanity/image-url';
 import Image from 'next/legacy/image'
 
