@@ -117,7 +117,7 @@ export default function Resume() {
                 <div className="w-full">
                         {person.organizations.map((org, id) => {
                             return (
-                                <div className="flex pb-8">
+                                <div key ={id} className="flex pb-8">
                                     <div className="hidden flex-none p-2 sm:flex sm:basis-1/6 md:basis-1/6"></div>
                                     <div className="flex w-full  bg-white flex-col justify-start pt-4 text-black font-bold hover:text-blue-700
                                     sm:basis-1/3 md:basis-1/6 lg:basis-1/6" >
