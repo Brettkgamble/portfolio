@@ -113,59 +113,71 @@ export default function Resume() {
                         text-start tracking-widest  ">Experience
                        <hr className="mt-2 w-14 h-2 dark:bg-blue-700"/>
                     </div>
-                    <div className="flex pl-8 bg-white flex-col justify-center pt-8 text-black font-bold hover:text-blue-700">
+                </div>
+                <div className="w-full">
                         {person.organizations.map((org, id) => {
                             return (
-                                <>
-                                    <span key={id}>
-                                        <Link
-                                            href={org.url}
-                                            target="_blank"
-                                        >
-                                            {org.name}
-                                        </Link>
-                                    </span>
-                                    <div className="flex bg-white flex-col py-2 ">
-                                        <Image
-                                            className=" w-3/6 object-left-top sm:w-2/5 md:w-3/4 lg:w-2/4"
-                                            src={
-                                                urlFor(org.image.asset.url)
-                                                .height(400)
-                                                .width(800)
-                                                .url()
-                                            }
-                                            alt={org.image.alt}
-                                            quality='100'
-                                            width="600"
-                                            height="600"
-                                            // priority
-                                            placeholder="blur"
-                                            blurDataURL={org.image.asset.url}
-                                        />
+                                <div className="flex pb-8">
+                                    <div className="hidden flex-none p-2 sm:flex sm:basis-1/6 md:basis-1/6"></div>
+                                    <div className="flex w-full  bg-white flex-col justify-start pt-4 text-black font-bold hover:text-blue-700
+                                    sm:basis-1/3 md:basis-1/6 lg:basis-1/6" >
+                                        {/*sm:w-2/5 md:w-3/4 lg:w-2/4"*/}
+                                        {/*md:w-1/5 lg:w-1/6*/}
+                                        <span key={id}>
+                                            <Link
+                                                href={org.url}
+                                                target="_blank"
+                                            >
+                                                {org.name}
+                                            </Link>
+                                        </span>
+                                        <div className="flex bg-white flex-col py-2 ">
+                                            <Image
+                                                className=" w-full object-left-top "
+                                                src={
+                                                    urlFor(org.image.asset.url)
+                                                    .height(400)
+                                                    .width(800)
+                                                    .url()
+                                                }
+                                                alt={org.image.alt}
+                                                quality='100'
+                                                width="600"
+                                                height="600"
+                                                // priority
+                                                placeholder="blur"
+                                                blurDataURL={org.image.asset.url}
+                                            />
+                                        </div>
                                     </div>
-                                </>
+                                    <div className="w-full flex pl-16 pr-8 pt-4 justify-start  sm:basis-2/6 md:basis-2/3 lg:basis-5/6">
+                                        {/* md:w-2/4 lg:w-2/4*/}
+                                        {/*<div className="text-white text-center bg-blue-600 px-4 py-2 m-2 rounded-lg">2</div>*/}
+                                        <div className=" font-roboto-400 text-black ">
+                                            <div>
+                                                <div className="text-black font-bold pb-4 -ml-4">
+                                                    {person.organizations[0].roles[0].period}
+                                                </div>
+                                                <BlockContent
+                                                    style={{fontSize: "3rem"}}
+                                                    blocks={person.organizations[0].roles[0].role}
+                                                    serializers={serializers}
+                                                    projectId={client.projectId}
+                                                    dataset={client.dataset}
+                                                    imageOptions={{w: 500, h: 440, fit: 'max'}}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/*<div className="hidden flex-none p-2 sm:flex sm:basis-1/6 md:basis-1/6"></div>*/}
+                                </div>
+
+
                             )
                         })}
-                    </div>
+
                 </div>
-                <div className="w-full flex-none px-8 pt-4 md:w-2/4 lg:w-2/4">
-                    {/*<div className="text-white text-center bg-blue-600 px-4 py-2 m-2 rounded-lg">2</div>*/}
-                    <div className=" font-roboto-400 text-black md:pt-16">
-                        <div>
-                            <div className="text-black font-bold pb-4 -ml-4">
-                                {person.organizations[0].roles[0].period}
-                            </div>
-                            <BlockContent
-                                style={{fontSize: "3rem"}}
-                                blocks={person.organizations[0].roles[0].role}
-                                serializers={serializers}
-                                projectId={client.projectId}
-                                dataset={client.dataset}
-                                imageOptions={{w: 500, h: 440, fit: 'max'}}
-                            />
-                        </div>
-                    </div>
-                </div>
+
 
                 {/*<div className="w-full flex-none p-2 md:w-2/5">*/}
                 {/*    <div className="text-white text-center bg-blue-600 px-4 py-2 m-2 rounded-lg">3</div>*/}
