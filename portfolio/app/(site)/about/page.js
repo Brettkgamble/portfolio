@@ -19,6 +19,7 @@ const query = groq `
             url,
             roles[]->{
                 period,
+                name,
                 role[],
             },
             image{
@@ -55,10 +56,10 @@ export default function Resume() {
         <div className="bg-white pb-32">
             <div className="flex flex-wrap">
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
-                <div className=" flex-none pt-2 pl-8 w-11/12 md:w-1/5 lg:w-1/6">
+                <div className=" flex-none pt-2 pl-2 w-11/12 md:w-1/5 lg:w-1/6">
                     <div className=" font-roboto-600 font-bold text-black w-full uppercase
                         text-start tracking-widest  ">ABOUT ME
-                       <hr className="mt-2 w-14 h-2 dark:bg-blue-700"/>
+                       <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
                     </div>
                     <div className="relative flex bg-white flex-col justify-center py-8 sm:w-4/5 ">
                         <Image
@@ -108,24 +109,31 @@ export default function Resume() {
                     </div>
                 </div>
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
+            </div>
+
+                {/* Experience Section*/}
+            <div className="flex flex-wrap">
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
-                <div className="w-full flex-none pl-8 pt-2 md:w-1/5 lg:w-1/6">
+                <div className=" flex-none pt-2 pl-2 pb-4 w-11/12 md:w-1/5 lg:w-1/6">
                     <div className=" font-roboto-600 font-bold text-black w-full uppercase
                         text-start tracking-widest  ">Experience
-                       <hr className="mt-2 w-14 h-2 dark:bg-blue-700"/>
+                       <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
                     </div>
                 </div>
-                <div className="w-11/12 pl-8">
-                        {person.organizations.map((org, id) => {
-                            return (
-                                <div key ={id} className="flex flex-col w-fit pb-8">
-                                    {/*replace next div with 80% width??? that way we can remove all the css in it*/}
-                                    <div className="hidden flex-none p-2 sm:flex sm:basis-1/6 md:basis-1/6"></div>
-                                    <div className="flex basis-full  bg-white flex-col justify-start pt-4 text-black font-bold hover:text-blue-700
-                                        sm:basis-1/3 md:basis-1/3 lg:basis-1/3" >
-                                        {/*sm:w-2/5 md:w-3/4 lg:w-2/4"*/}
-                                        {/*md:w-1/5 lg:w-1/6*/}
-                                        <span key={id}>
+            </div>
+                {/*<div className="w-full">*/}
+                {/*    <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>*/}
+
+
+                    {person.organizations.map((org, id) => {
+                        return (
+                            <>
+                                <div className="flex flex-wrap pb-8">
+                                    <div className="hidden flex-none p-2 sm:flex  md:w-1/6"></div>
+                                    <div className="flex flex-col pt-2 pl-8 w-full justify-start text-black font-bold hover:text-blue-700 md:w-1/5 md:pl-4 lg:w-1/6">
+                                        {/*Sidebar*/}
+                                        <span key={id} className="text-2xl">
+
                                             <Link
                                                 href={org.url}
                                                 target="_blank"
@@ -133,62 +141,72 @@ export default function Resume() {
                                                 {org.name}
                                             </Link>
                                         </span>
-                                        <div className="relative overflow-hidden flex mx-auto object-center basis-full bg-white flex-col py-2 md:w-4/5">
-                                            <Image
-                                                className="flex pt-4 md:object-left-top "
-                                                src={
-                                                    urlFor(org.image.asset.url)
-                                                    .height(350)
-                                                    .width(650)
-                                                    .crop("center")
-                                                    .url()
-                                                }
-                                                style={{
-                                                    objectFit: "scale-down"
-                                                }}
-                                                alt={org.image.alt}
-                                                quality='100'
+                                        <div className="relative overflow-hidden flex object-start basis-full bg-white flex-col py-2 md:object-center md:mx-auto ">
+                                                <Image
+                                                    className="flex pt-4 md:object-left-top "
+                                                    src={
+                                                        urlFor(org.image.asset.url)
+                                                        .height(350)
+                                                        .width(650)
+                                                        .crop("center")
+                                                        .url()
+                                                    }
+                                                    style={{
+                                                        objectFit: "scale-down"
+                                                    }}
+                                                    alt={org.image.alt}
+                                                    quality='100'
 
-                                                height="200"
-                                                width="200"
-                                                // priority
-                                                placeholder="blur"
-                                                blurDataURL={org.image.asset.url}
-                                            />
-                                        </div>
-                                    </div>
-                                    {org.roles.map((role, roleid) => {
-                                        return (
-                                            <div key = {roleid}
-                                                 className="basis-full flex ml-8 pr-8 pt-4 justify-start
-                                                 sm:basis-2/6 md:basis-2/3 lg:basis-5/6">
-                                                <div className=" font-roboto-400 text-black ">
-                                                    <div>
-                                                        <div className="text-black font-bold pb-4 -ml-4">
-                                                            {role.period}
-                                                        </div>
-                                                        <BlockContent
-                                                            style={{fontSize: "3rem"}}
-                                                            blocks={role.role}
-                                                            serializers={serializers}
-                                                            projectId={client.projectId}
-                                                            dataset={client.dataset}
-                                                            imageOptions={{w: 500, h: 440, fit: 'max'}}
-                                                        />
-                                                    </div>
-                                                </div>
+                                                    height="200"
+                                                    width="200"
+                                                    // priority
+                                                    placeholder="blur"
+                                                    blurDataURL={org.image.asset.url}
+                                                />
                                             </div>
-                                        )
-                                    })}
+                                    </div>
+                                    <div className="flex  px-4 w-full md:w-1/2">
+                                        {/*Content*/}
+                                        {org.roles.map((role, roleid) => {
+                                                return (
+                                                    <div key = {roleid}
+                                                         className="basis-full flex ml-8  pt-4 justify-start md:w-1/2">
+                                                        <div className=" font-roboto-400 text-black ">
+                                                            <div>
+                                                                <div className="text-black font-bold pb-4 -ml-4">
+                                                                    {role.period}
+                                                                </div>
+                                                                <div className="text-black font-bold pb-4 -ml-4">
+                                                                    {role.name}
+                                                                </div>
+                                                                <BlockContent
+                                                                    className="-ml-4"
+                                                                    style={{fontSize: "3rem"}}
+                                                                    blocks={role.role}
+                                                                    serializers={serializers}
+                                                                    projectId={client.projectId}
+                                                                    dataset={client.dataset}
+                                                                    imageOptions={{w: 500, h: 440, fit: 'max'}}
+                                                                />
+                                                            </div>
+                                                            <hr className="mt-2 w-full h-0 dark:bg-blue-700"/>
+                                                        </div>
+                                                    </div>
+                                                )
+                                            })}
 
-                                    <div className="hidden flex-none p-2 sm:flex sm:basis-1/6 md:basis-1/6"></div>
+                                    </div>
+
+                                    <div className="hidden flex-none p-2 sm:flex  md:w-1/6"></div>
+
                                 </div>
+                            </>
 
 
-                            )
-                        })}
+                        )
+                    })}
 
-                </div>
+            {/*</div>*/}
 
 
                 {/*<div className="w-full flex-none p-2 md:w-2/5">*/}
@@ -197,7 +215,7 @@ export default function Resume() {
                 {/*<div className="w-full flex-none p-2 md:w-2/5">*/}
                 {/*    <div className="text-white text-center bg-blue-600 px-4 py-2 m-2 rounded-lg">4</div>*/}
                 {/*</div>*/}
-            </div>
+            {/*</div>*/}
 
              {/*Grid Example*/}
                 {/*<div className="min-h-screen flex items-start justify-center">*/}
