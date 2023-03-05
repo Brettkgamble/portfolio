@@ -56,11 +56,11 @@ export default function Resume() {
         <div className="bg-white pb-32">
             <div className="flex flex-wrap">
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
-                <div className=" flex-none pt-2 pl-2 w-11/12 md:w-1/5 lg:w-1/6">
-                    <div className=" font-roboto-600 font-bold text-black w-full uppercase
+                <div className=" flex-none pt-8 pl-2 w-11/12 md:w-1/5 lg:w-1/6">
+                    <h1 className="pt-4 font-roboto-600 font-bold text-black text-3xl w-full uppercase
                         text-start tracking-widest  ">ABOUT ME
                        <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
-                    </div>
+                    </h1>
                     <div className="relative flex bg-white flex-col justify-center py-8 sm:w-4/5 ">
                         <Image
                             className="mx-auto w-1/3 rounded-full sm:w-2/5 md:w-3/4 lg:w-2/4"
@@ -93,9 +93,9 @@ export default function Resume() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex-none px-8 md:w-2/4 lg:w-2/4">
+                <div className="w-full flex-none pt-16 px-8 md:w-2/4 lg:w-2/4">
                     <div className=" font-roboto-400 text-black md:pt-16">
-                        <div>
+                        <section>
                             <BlockContent
                                 style={{fontSize: "3rem"}}
                                 blocks={person.introduction[0].bio}
@@ -104,7 +104,7 @@ export default function Resume() {
                                 dataset={client.dataset}
                                 imageOptions={{w: 500, h: 440, fit: 'max'}}
                             />
-                        </div>
+                        </section>
                     </div>
                 </div>
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
@@ -115,20 +115,20 @@ export default function Resume() {
             <div className="flex flex-wrap">
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
                 <div className=" flex-none pt-2 pl-2 pb-4 w-11/12 md:w-1/5 lg:w-1/6">
-                    <div className=" font-roboto-600 font-bold text-black w-full uppercase
+                    <h2 className=" font-roboto-600 font-bold text-black text-2xl w-full uppercase
                         text-start tracking-widest  ">Experience
                        <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
-                    </div>
+                    </h2>
                 </div>
             </div>
             {person.organizations.map((org, id) => {
                 return (
                     <>
-                        <div className="flex flex-wrap pb-8">
+                        <div className="flex flex-wrap pb-8 even:bg-blue-100">
                             <div className="hidden flex-none p-2 sm:flex  md:w-1/6"></div>
-                            <div className="flex flex-col pt-2 pl-8 w-full justify-start text-black font-bold hover:text-blue-700 md:w-1/5 md:pl-4 lg:w-1/6">
+                            <div className="flex flex-col pt-3 pl-8 w-full justify-start text-black font-bold hover:text-blue-700 md:w-1/5 md:pl-4 lg:w-1/6">
                                 {/*Sidebar*/}
-                                <span key={id} className="text-2xl">
+                                <h3 key={id} className="md:text-lg lg:text-xl">
 
                                     <Link
                                         href={org.url}
@@ -136,8 +136,8 @@ export default function Resume() {
                                     >
                                         {org.name}
                                     </Link>
-                                </span>
-                                <div className="relative overflow-hidden flex object-left basis-full bg-white flex-col py-2 lg:w-3/4">
+                                </h3>
+                                <div className="relative overflow-hidden flex object-left basis-full  flex-col py-2 lg:w-3/4">
                                         <Image
                                             className="flex pt-4 md:object-left-top "
                                             src={
@@ -170,12 +170,12 @@ export default function Resume() {
 
                                                 <div className=" font-roboto-400 text-black ">
                                                     <div>
-                                                        <div className="text-black text-xl font-bold pb-4 -ml-4">
+                                                        <h3 className="text-black text-lg font-bold pb-4 -ml-4">
                                                             {role.period}
-                                                        </div>
-                                                        <div className="text-black font-bold pb-4 -ml-4 text-blue-700">
+                                                        </h3>
+                                                        <h2 className="text-black font-bold pb-4 -ml-4 text-blue-700">
                                                             {role.name}
-                                                        </div>
+                                                        </h2>
                                                         <BlockContent
                                                             className="-ml-4"
                                                             style={{fontSize: "3rem"}}
@@ -186,7 +186,6 @@ export default function Resume() {
                                                             imageOptions={{w: 500, h: 440, fit: 'max'}}
                                                         />
                                                     </div>
-                                                    <hr className="mt-2 w-full h-0 dark:bg-blue-700"/>
                                                 </div>
                                             </div>
                                         )

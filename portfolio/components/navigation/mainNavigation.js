@@ -105,7 +105,7 @@ export default function MainNavigation(props) {
                                        <Link
                                            href="/about"
                                        >
-                                           About
+                                           CV
                                        </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 hover:font-bold">
