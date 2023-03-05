@@ -50,7 +50,6 @@ function urlFor(source) {
 export default function Resume() {
 
     const person = p[0]
-    console.log('Person', person)
 
     return (
         <div className="bg-white pb-32">
@@ -137,7 +136,7 @@ export default function Resume() {
                                         {org.name}
                                     </Link>
                                 </span>
-                                <div className="relative overflow-hidden flex object-start basis-full bg-white flex-col py-2 md:object-center md:mx-auto ">
+                                <div className="relative overflow-hidden flex object-left basis-full bg-white flex-col py-2 lg:w-3/4">
                                         <Image
                                             className="flex pt-4 md:object-left-top "
                                             src={
