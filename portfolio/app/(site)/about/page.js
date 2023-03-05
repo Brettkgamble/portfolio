@@ -5,6 +5,7 @@ import imageUrlBuilder from '@sanity/image-url';
 import serializers from "../../../components/serializers/serializer";
 import BlockContent from "@sanity/block-content-to-react";
 import Link from 'next/link';
+import {FaLinkedinIn } from 'react-icons/fa'
 
 const builder = imageUrlBuilder(client);
 
@@ -85,7 +86,7 @@ export default function Resume() {
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        LinkedIn!
+                                        <FaLinkedinIn className="text-white bg-linkedin rounded-sm" size={24} style={{paddingTop: "2"}}/>
                                     </a>
                                 </li>
                             </ol>
@@ -160,12 +161,13 @@ export default function Resume() {
                                         />
                                     </div>
                             </div>
-                            <div className="flex  px-4 w-full md:w-1/2">
+                            <div className="flex flex-col px-4 w-full md:w-1/2">
                                 {/*Content*/}
                                 {org.roles.map((role, roleid) => {
                                         return (
                                             <div key = {roleid}
-                                                 className="basis-full flex ml-8  pt-3 justify-start md:w-1/2">
+                                                 className="basis-full flex  ml-8  pt-3 justify-start w-full">
+
                                                 <div className=" font-roboto-400 text-black ">
                                                     <div>
                                                         <div className="text-black text-xl font-bold pb-4 -ml-4">
