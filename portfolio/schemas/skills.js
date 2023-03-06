@@ -1,3 +1,5 @@
+import {mediaAssetSource} from "sanity-plugin-media";
+
 export default {
     type: 'document',
     name: 'skills',
@@ -18,5 +20,47 @@ export default {
                 maxLength: 96
             }
         },
+        {
+          name: 'description',
+          title: 'Skill Description',
+          type: 'skillBlock',
+        },
+        {
+          name: 'image',
+          title: 'Image',
+          type: 'image',
+          fields: [
+            //   {
+            //     name: 'name',
+            //     title: 'Title',
+            //     type: 'string',
+            //     description: "A name to describe the image",
+            // },
+            {
+              type: 'text',
+              name: 'alt',
+              title: 'Alternative Text',
+              description: `Some of your visitors cannot see images, be they blind, color-blind, low-sighted; 
+              alternative text is of great help for those people that can rely on it to have a good idea of 
+              what\'s on your page.`,
+              options: {
+                hotspot: true
+              }
+            },
+            {
+              type: 'url',
+              name: 'attribution_url',
+              title: 'Attribution Url',
+              description: 'Link to the creator for copyright attribution',
+              validation: Rule => Rule.uri({
+                scheme: ['http', 'https', 'mailto', 'tel']
+              })
+            }
+          ],
+          options: {
+            sources: [mediaAssetSource],
+            hotspot: true,
+          }
+      } ,
     ]
 }
