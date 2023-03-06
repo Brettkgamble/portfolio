@@ -138,7 +138,7 @@ export default {
       type: 'array',
       of: [{ type: 'reference', to: {type: 'bioBlock'}}]
     },
-        {
+    {
       name: 'skills',
       title: 'skills',
       type: 'array',

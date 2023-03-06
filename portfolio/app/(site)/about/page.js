@@ -15,6 +15,7 @@ const query = groq `
         introduction[]->{
             bio[]
         },
+        skills[]->,
         organizations[]->{
             name,
             url,
@@ -109,6 +110,7 @@ export const metadata ={
 export default function Resume() {
 
     const person = p[0]
+    console.log('Person', person)
 
     return (
         <div className="bg-white pb-32">
@@ -168,6 +170,29 @@ export default function Resume() {
                 </div>
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
             </div>
+
+            {/* Skills */}
+
+            <div className="flex flex-wrap">
+                <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
+                <div className=" flex-none pt-2 pl-2 pb-4 w-11/12 md:w-1/5 lg:w-1/6">
+                    <h2 className=" font-roboto-600 font-bold text-black text-2xl w-full uppercase
+                        text-start tracking-widest  ">Skills
+                       <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
+                    </h2>
+                </div>
+            </div>
+            <div className="flex w-full justify-center">
+                <div className="flex flex-wrap w-8/12 md:pl-8">
+                    {person.skills.map((skill, id) => {
+                      return (
+                            <>
+                                <div className="p-1 text-black">{skill.name}</div>
+                            </>
+                      )})}
+                </div>
+            </div>
+
 
             {/* Experience Section*/}
 
