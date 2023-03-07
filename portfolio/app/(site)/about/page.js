@@ -182,15 +182,24 @@ export default function Resume() {
                     </h2>
                 </div>
             </div>
-            <div className="flex w-full justify-center">
-                <div className="flex flex-wrap w-8/12 md:pl-8">
+            <div className="flex w-full justify-center py-8">
+                <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-2/6"></div>
+                <div className="flex flex-wrap w-3/6 md:pl-8">
                     {person.skills.map((skill, id) => {
                       return (
                             <>
-                                <div className="p-1 text-black">{skill.name}</div>
+                                <button
+                                    href="#"
+                                    className=" transititext-primary text-black mx-1 my-1 px-2 text-sm border
+                                        border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"
+                                    data-te-toggle="tooltip"
+                                    title="Click for more info!"
+                                >{skill.name}</button>
                             </>
                       )})}
                 </div>
+
+                <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
             </div>
 
 
