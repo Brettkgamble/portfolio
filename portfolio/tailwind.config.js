@@ -9,7 +9,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./portfolio/**/*.{js,ts,jsx,tsx}",
     "./schemas/**/*.{js,ts,jsx,tsx}",
+      "./node_modules/tw-elements/dist/js/**/*.js"
   ],
+  plugins: [require("tw-elements/dist/plugin")],
   theme: {
     fontFamily: {
       'roboto': ['Roboto','sans-serif']

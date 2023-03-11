@@ -38,7 +38,8 @@
     "styled-components": "^5.3.6",
     "supports-color": "^9.3.1",
     "swr": "^2.0.3",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "tw-elements": "^1.0.0-beta1"
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "^2.0.1",
