@@ -21,7 +21,7 @@ export default function SkillModal( { skill } ) {
           </span>
           {/*  Overlay */}
           <div id="my-modal" className={isNavOpen ? "fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" : "hideModal"}>
-              <div className="relative top-36 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+              <div className="relative top-60 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
                   <div class="mt-3 text-center">
                       <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
                           <svg
