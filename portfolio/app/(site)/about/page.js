@@ -7,7 +7,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import Link from 'next/link';
 import {FaLinkedinIn } from 'react-icons/fa';
 
-import SkillModal from '../../../components/modals/ClientComponent'
+import SkillModal from '../../../components/modals/skillModal'
 
 const builder = imageUrlBuilder(client);
 
@@ -17,7 +17,12 @@ const query = groq `
         introduction[]->{
             bio[]
         },
-        skills[]->,
+         skills[]->{
+          name,
+          description[]->{
+            skill
+          },
+        },
         organizations[]->{
             name,
             url,
@@ -189,7 +194,7 @@ export default function Resume() {
                 <div className="flex flex-wrap w-3/6 md:pl-8">
                     {person.skills.map((skill, id) => {
                       return (
-                          <SkillModal key = {id} skill={skill}/>
+                          <SkillModal key={skill.id} skill={skill}/>
                       )  })}
 
 

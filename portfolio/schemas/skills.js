@@ -20,10 +20,11 @@ export default {
                 maxLength: 96
             }
         },
-        {
+         {
           name: 'description',
-          title: 'Skill Description',
-          type: 'skillBlock',
+          title: 'Description',
+          type: 'array',
+          of: [{ type: 'reference', to: {type: 'skillBlock'}}]
         },
         {
           name: 'image',

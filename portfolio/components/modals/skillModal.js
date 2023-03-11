@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import BlockContent from "@sanity/block-content-to-react";
+import serializers from "../serializers/serializer";
+import {client} from "../../lib/sanity.client";
 
 export default function SkillModal( { skill } ) {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  console.log('Skill', skill)
 
   return (
       <>
@@ -21,31 +23,41 @@ export default function SkillModal( { skill } ) {
           </span>
           {/*  Overlay */}
           <div id="my-modal" className={isNavOpen ? "fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" : "hideModal"}>
-              <div className="relative top-60 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
-                  <div class="mt-3 text-center">
-                      <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
-                          <svg
-                              classname="h-6 w-6 text-green-600"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                          >
-                              <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  d="M5 13l4 4L19 7"
-                              >
-                              </path>
-                          </svg>
-                      </div>
-                      <h3 className="text-lg leading-6 font-medium text-gray-900">Successful!</h3>
-                      <div className="mt-2 px-7 py-3">
-                          <p className="text-sm text-gray-500">
-                              Account has been successfully registered!
-                          </p>
-                      </div>
+              <div className="relative top-60 mx-auto p-5 border w-2/5 shadow-lg rounded-md bg-white">
+                  <div class=" text-center">
+                      {/*<div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">*/}
+                      {/*    <svg*/}
+                      {/*        className="h-6 w-6 text-green-600"*/}
+                      {/*        fill="none"*/}
+                      {/*        stroke="currentColor"*/}
+                      {/*        viewBox="0 0 24 24"*/}
+                      {/*        xmlns="http://www.w3.org/2000/svg"*/}
+                      {/*    >*/}
+                      {/*        <path*/}
+                      {/*            stroke-linecap="round"*/}
+                      {/*            stroke-linejoin="round"*/}
+                      {/*            stroke-width="2"*/}
+                      {/*            d="M5 13l4 4L19 7"*/}
+                      {/*        >*/}
+                      {/*        </path>*/}
+                      {/*    </svg>*/}
+                      {/*</div>*/}
+                      <h3 className="text-2xl font-medium text-gray-900 ">{skill.name}</h3>
+                      <div className="w-full flex-none ">
+                        <div className=" font-roboto-400 text-black pt-1">
+                            <section>
+                                <BlockContent
+                                    // style={{fontSize: "3rem"}}
+                                    blocks={skill.description[0].skill}
+                                    serializers={serializers}
+                                    projectId={client.projectId}
+                                    dataset={client.dataset}
+                                    imageOptions={{w: 500, h: 440, fit: 'max'}}
+                                />
+                            </section>
+                        </div>
+                    </div>
+
                       <div Name="items-center px-4 py-3">
                           <button
                               onClick={()=> setIsNavOpen(false)}
