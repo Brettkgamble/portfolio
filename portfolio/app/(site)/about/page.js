@@ -189,7 +189,7 @@ export default function Resume() {
                 <div className="flex flex-wrap w-3/6 md:pl-8">
                     {person.skills.map((skill, id) => {
                       return (
-                          <ClientComponent skill={skill}/>
+                          <ClientComponent key = {id} skill={skill}/>
                       )  })}
 
 
