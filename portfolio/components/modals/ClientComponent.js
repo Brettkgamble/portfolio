@@ -1,9 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import Link from "next/link";
 
-export default function Counter( { skill } ) {
+export default function SkillModal( { skill } ) {
   const [isNavOpen, setIsNavOpen] = useState(false);
   console.log('Skill', skill)
 
@@ -22,7 +21,7 @@ export default function Counter( { skill } ) {
           </span>
           {/*  Overlay */}
           <div id="my-modal" className={isNavOpen ? "fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" : "hideModal"}>
-              <div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+              <div className="relative top-36 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
                   <div class="mt-3 text-center">
                       <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
                           <svg
@@ -51,9 +50,9 @@ export default function Counter( { skill } ) {
                           <button
                               onClick={()=> setIsNavOpen(false)}
                               id="ok-btn"
-                              className="px-4 py-2 bg-green-500 text-white text-base font-medium rounded-md w-full
+                              className="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-3/6
                                 shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300">
-                              OK
+                              Close
                           </button>
                       </div>
                   </div>

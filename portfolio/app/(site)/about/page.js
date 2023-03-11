@@ -7,7 +7,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import Link from 'next/link';
 import {FaLinkedinIn } from 'react-icons/fa';
 
-import ClientComponent from '../../../components/modals/ClientComponent'
+import SkillModal from '../../../components/modals/ClientComponent'
 
 const builder = imageUrlBuilder(client);
 
@@ -189,7 +189,7 @@ export default function Resume() {
                 <div className="flex flex-wrap w-3/6 md:pl-8">
                     {person.skills.map((skill, id) => {
                       return (
-                          <ClientComponent key = {id} skill={skill}/>
+                          <SkillModal key = {id} skill={skill}/>
                       )  })}
 
 
