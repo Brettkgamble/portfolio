@@ -11,6 +11,7 @@ export default function MainNavigation(props) {
 
     return (
         <>
+
            <nav className="z-50 w-full bg-nav-rgba items-end justify-between pt-2 pb-4 border-b border-blue-100 ">
                {/*Small screen*/}
                <div className="flex md:hidden">

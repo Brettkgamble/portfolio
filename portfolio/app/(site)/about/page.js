@@ -5,7 +5,9 @@ import imageUrlBuilder from '@sanity/image-url';
 import serializers from "../../../components/serializers/serializer";
 import BlockContent from "@sanity/block-content-to-react";
 import Link from 'next/link';
-import {FaLinkedinIn } from 'react-icons/fa'
+import {FaLinkedinIn } from 'react-icons/fa';
+
+import ClientComponent from '../../../components/modals/ClientComponent'
 
 const builder = imageUrlBuilder(client);
 
@@ -187,16 +189,22 @@ export default function Resume() {
                 <div className="flex flex-wrap w-3/6 md:pl-8">
                     {person.skills.map((skill, id) => {
                       return (
-                            <>
-                                <button
-                                    href="#"
-                                    className=" transititext-primary text-black mx-1 my-1 px-2 text-sm border
-                                        border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"
-                                    data-te-toggle="tooltip"
-                                    title="Click for more info!"
-                                >{skill.name}</button>
-                            </>
-                      )})}
+                          <ClientComponent skill={skill}/>
+                      )  })}
+
+
+
+                      {/*return (*/}
+                      {/*      <>*/}
+                      {/*          <button*/}
+                      {/*              href="#"*/}
+                      {/*              className=" transititext-primary text-black mx-1 my-1 px-2 text-sm border*/}
+                      {/*                  border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"*/}
+                      {/*              data-te-toggle="tooltip"*/}
+                      {/*              title="Click for more info!"*/}
+                      {/*          >{skill.name}</button>*/}
+                      {/*      </>*/}
+                      {/*)})}*/}
                 </div>
 
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
