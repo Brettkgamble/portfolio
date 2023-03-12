@@ -26,6 +26,12 @@ export default {
           type: 'array',
           of: [{ type: 'reference', to: {type: 'skillBlock'}}]
         },
+         {
+          name: 'skillProficiency',
+          title: 'Skill Proficiency',
+          type: 'array',
+          of: [{ type: 'reference', to: {type: 'skillProficiency'}}]
+        },
         {
           name: 'image',
           title: 'Image',

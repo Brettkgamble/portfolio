@@ -19,6 +19,10 @@ const query = groq `
         },
          skills[]->{
           name,
+          skillProficiency[]->{
+            title,
+            description
+          },
           description[]->{
             skill
           },

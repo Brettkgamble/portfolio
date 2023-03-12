@@ -15,49 +15,45 @@ export default function SkillModal( { skill } ) {
                   href="#"
                   onClick={() => setIsNavOpen((prev) => !prev)}
                   className=" transititext-primary text-black mx-1 my-1 px-2 text-sm border
-                                      border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"
+                                  border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"
                   data-te-toggle="tooltip"
                   title="Click for more info!"
-              >{skill.name}
+              >
+                  {skill.name}
               </button>
           </span>
+
           {/*  Overlay */}
+
           <div id="my-modal" className={isNavOpen ? "fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" : "hideModal"}>
               <div className="relative top-60 mx-auto p-5 border w-2/5 shadow-lg rounded-md bg-white">
                   <div class=" text-center">
-                      {/*<div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">*/}
-                      {/*    <svg*/}
-                      {/*        className="h-6 w-6 text-green-600"*/}
-                      {/*        fill="none"*/}
-                      {/*        stroke="currentColor"*/}
-                      {/*        viewBox="0 0 24 24"*/}
-                      {/*        xmlns="http://www.w3.org/2000/svg"*/}
-                      {/*    >*/}
-                      {/*        <path*/}
-                      {/*            stroke-linecap="round"*/}
-                      {/*            stroke-linejoin="round"*/}
-                      {/*            stroke-width="2"*/}
-                      {/*            d="M5 13l4 4L19 7"*/}
-                      {/*        >*/}
-                      {/*        </path>*/}
-                      {/*    </svg>*/}
-                      {/*</div>*/}
                       <h3 className="text-2xl font-medium text-gray-900 ">{skill.name}</h3>
+                      <h3 className="text-xl font-medium text-gray-900 ">Level:&nbsp;
+                          {skill.skillProficiency ?
+                              <span
+                                  className=" transititext-primary text-blue-800 mx-1 my-2 px-2 pb-1 text-base
+                                                 border border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"
+                                  data-te-toggle="tooltip"
+                                  title={skill.skillProficiency[0].description}
+                              >
+                                  {skill.skillProficiency[0].title}
+                              </span>
+                          : null}
+                      </h3>
                       <div className="w-full flex-none ">
-                        <div className=" font-roboto-400 text-black pt-1">
-                            <section>
-                                <BlockContent
-                                    // style={{fontSize: "3rem"}}
-                                    blocks={skill.description[0].skill}
-                                    serializers={serializers}
-                                    projectId={client.projectId}
-                                    dataset={client.dataset}
-                                    imageOptions={{w: 500, h: 440, fit: 'max'}}
-                                />
-                            </section>
-                        </div>
-                    </div>
-
+                          <div className=" font-roboto-400 text-black pt-1">
+                              <section>
+                                  <BlockContent
+                                      blocks={skill.description[0].skill}
+                                      serializers={serializers}
+                                      projectId={client.projectId}
+                                      dataset={client.dataset}
+                                      imageOptions={{w: 500, h: 440, fit: 'max'}}
+                                  />
+                              </section>
+                          </div>
+                      </div>
                       <div Name="items-center px-4 py-3">
                           <button
                               onClick={()=> setIsNavOpen(false)}
@@ -71,7 +67,8 @@ export default function SkillModal( { skill } ) {
               </div>
           </div>
           <div className="absolute top-0 right-0 px-8 py-8"
-               onClick={()=> setIsNavOpen(false)}>
+               onClick={()=> setIsNavOpen(false)}
+          >
               <svg
                   className="h-8 w-8 text-gray-600"
                   viewBox="0 0 24 24"
