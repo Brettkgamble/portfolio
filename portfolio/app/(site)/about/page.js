@@ -27,6 +27,9 @@ const query = groq `
             skill
           },
         },
+        higherEducation[]->{
+        ...,
+        },
         organizations[]->{
             name,
             url,
@@ -200,25 +203,32 @@ export default function Resume() {
                       return (
                           <SkillModal key={skill.id} skill={skill}/>
                       )  })}
-
-
-
-                      {/*return (*/}
-                      {/*      <>*/}
-                      {/*          <button*/}
-                      {/*              href="#"*/}
-                      {/*              className=" transititext-primary text-black mx-1 my-1 px-2 text-sm border*/}
-                      {/*                  border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"*/}
-                      {/*              data-te-toggle="tooltip"*/}
-                      {/*              title="Click for more info!"*/}
-                      {/*          >{skill.name}</button>*/}
-                      {/*      </>*/}
-                      {/*)})}*/}
                 </div>
-
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
             </div>
 
+            {/* Education */}
+
+            <div className="flex flex-wrap">
+                <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
+                <div className=" flex-none pt-2 pl-2 pb-4 w-11/12 md:w-1/5 lg:w-1/6">
+                    <h2 className=" font-roboto-600 font-bold text-black text-2xl w-full uppercase
+                        text-start tracking-widest  ">Education
+                       <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
+                    </h2>
+                </div>
+            </div>
+            <div className="flex w-full justify-center py-8">
+                <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-2/6"></div>
+                <div className="flex flex-wrap w-3/6 md:pl-8">
+                    {person.higherEducation.map((higherEd, id) => {
+                      return (
+                          <span key={id} className="text-black">{higherEd.name}</span>
+                          // <SkillModal key={skill.id} skill={skill}/>
+                      )  })}
+                </div>
+                <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
+            </div>
 
             {/* Experience Section*/}
 

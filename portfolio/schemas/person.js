@@ -144,6 +144,12 @@ export default {
       type: 'array',
       of: [{ type: 'reference', to: {type: 'skills'}}]
     },
+     {
+      name: 'higherEducation',
+      title: 'Higher Education',
+      type: 'array',
+      of: [{ type: 'reference', to: {type: 'higherEducation'}}]
+    },
     {
       name: 'organizations',
       type: 'array',
