@@ -150,6 +150,12 @@ export default {
       type: 'array',
       of: [{ type: 'reference', to: {type: 'higherEducation'}}]
     },
+       {
+      name: 'coursesAndCerts',
+      title: 'Courses and Certificates',
+      type: 'array',
+      of: [{ type: 'reference', to: {type: 'higherEducation'}}]
+    },
     {
       name: 'organizations',
       type: 'array',

@@ -14,7 +14,7 @@ export default function SkillModal( { skill } ) {
               <button
                   href="#"
                   onClick={() => setIsNavOpen((prev) => !prev)}
-                  className=" transititext-primary text-black mx-1 my-1 px-2 text-sm border
+                  className=" ransititext-primary text-black mx-1 my-1 px-2 text-sm border
                                   border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"
                   data-te-toggle="tooltip"
                   title="Click for more info!"
@@ -27,7 +27,7 @@ export default function SkillModal( { skill } ) {
 
           <div id="my-modal" className={isNavOpen ? "fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" : "hideModal"}>
               <div className="relative top-60 mx-auto p-5 border w-2/5 shadow-lg rounded-md bg-white">
-                  <div class=" text-center">
+                  <div className=" text-center">
                       <h3 className="text-2xl font-medium text-gray-900 ">{skill.name}</h3>
                       <h3 className="text-xl font-medium text-gray-900 ">Level:&nbsp;
                           {skill.skillProficiency ?
@@ -54,7 +54,7 @@ export default function SkillModal( { skill } ) {
                               </section>
                           </div>
                       </div>
-                      <div Name="items-center px-4 py-3">
+                      <div className="items-center px-4 py-3">
                           <button
                               onClick={()=> setIsNavOpen(false)}
                               id="ok-btn"
