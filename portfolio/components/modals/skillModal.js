@@ -41,7 +41,7 @@ export default function SkillModal( { skill } ) {
                               </span>
                           : null}
                       </h3>
-                      <div className="w-full flex-none ">
+                      <div className="w-full flex-none py-4 ">
                           <div className=" font-roboto-400 text-black pt-1">
                               <section>
                                   <BlockContent
