@@ -1,3 +1,4 @@
+// https://www.section.io/engineering-education/creating-a-modal-dialog-with-tailwind-css/
 'use client';
 
 import { useState } from 'react';
@@ -14,7 +15,7 @@ export default function SkillModal( { skill } ) {
               <button
                   href="#"
                   onClick={() => setIsNavOpen((prev) => !prev)}
-                  className=" ransititext-primary text-black mx-1 my-1 px-2 text-sm border
+                  className=" transititext-primary text-black mx-1 my-1 px-2 text-sm border
                                   border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"
                   data-te-toggle="tooltip"
                   title="Click for more info!"

@@ -7,7 +7,8 @@ import BlockContent from "@sanity/block-content-to-react";
 import Link from 'next/link';
 import {FaLinkedinIn } from 'react-icons/fa';
 
-import SkillModal from '../../../components/modals/skillModal'
+import SkillModal from '../../../components/modals/skillModal';
+import EducationModal from "../../../components/modals/educationModal";
 
 const builder = imageUrlBuilder(client);
 
@@ -28,8 +29,21 @@ const query = groq `
           },
         },
         higherEducation[]->{
-            ...,    
-        },
+            name,
+            courses[]->{
+                ...,
+              },
+            Organization[]->{
+              ...,
+               image{
+                alt,
+              asset->{
+                _id,
+                url
+              }
+            }
+            }
+          },
         coursesAndCerts[]->{
             ...,
         },
@@ -204,7 +218,7 @@ export default function Resume() {
                 <div className="flex flex-wrap w-3/6 md:pl-8">
                     {person.skills.map((skill, id) => {
                       return (
-                          <SkillModal key={skill.id} skill={skill}/>
+                          <SkillModal key={id} skill={skill}/>
                       )  })}
                 </div>
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
@@ -223,11 +237,11 @@ export default function Resume() {
             </div>
             <div className="flex w-full justify-center py-8">
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-2/6"></div>
-                <div className="flex flex-wrap w-3/6 md:pl-8">
+                <div className="flex flex-wrap w-5/6 md:pl-8">
                     {person.higherEducation.map((higherEd, id) => {
                       return (
-                          <li key={higherEd.id} className="text-black w-full font-bold">{higherEd.name}</li>
-                          // <SkillModal key={skill.id} skill={skill}/>
+                          // <li key={id} className="text-black w-full font-bold">{higherEd.name}</li>
+                          <EducationModal key={id} education={higherEd}/>
                       )  })}
                 </div>
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
@@ -247,7 +261,7 @@ export default function Resume() {
                 <div className="flex flex-wrap w-3/6 md:pl-8">
                     {person.coursesAndCerts.map((courses, id) => {
                       return (
-                          <li key={courses.id} className="text-black w-full font-bold">{courses.name}</li>
+                          <li key={id} className="text-black w-full font-bold">{courses.name}</li>
                           // <SkillModal key={skill.id} skill={skill}/>
                       )  })}
                 </div>
@@ -268,7 +282,7 @@ export default function Resume() {
             {person.organizations.map((org, id) => {
                 return (
                     <>
-                        <div key={org.id} className="flex flex-wrap pb-8 even:bg-blue-100">
+                        <div key={id} className="flex flex-wrap pb-8 even:bg-blue-100">
                             <div className="hidden flex-none p-2 sm:flex  md:w-1/6"></div>
                             <div className="flex flex-col pt-3 pl-8 w-full justify-start text-black font-bold hover:text-blue-700 md:w-1/5 md:pl-4 lg:w-1/6">
                                 {/*Sidebar*/}
@@ -307,9 +321,9 @@ export default function Resume() {
                             </div>
                             <div className="flex flex-col px-4 w-full md:w-1/2">
                                 {/*Content*/}
-                                {org.roles.map((role, roleid) => {
+                                {org.roles.map((role, id) => {
                                         return (
-                                            <div key = {role.id}
+                                            <div key = {id}
                                                  className="basis-full flex  ml-8  pt-3 justify-start w-full">
 
                                                 <div className=" font-roboto-400 text-black ">
