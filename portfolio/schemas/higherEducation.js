@@ -31,6 +31,11 @@ export default {
             description: "REQUIRED: The sort order",
         },
         {
+          name: 'period',
+          title: 'From to period',
+          type: 'string'
+      },
+        {
             name: 'url',
             description: "This is a REQUIRED field and is the base URL for the organization.",
             title: 'URL',

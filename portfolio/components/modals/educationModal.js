@@ -7,6 +7,7 @@ import serializers from "../serializers/serializer";
 import {client} from "../../lib/sanity.client";
 import Image from "next/image";
 import imageUrlBuilder from '@sanity/image-url';
+import { MdOutlineSchool } from 'react-icons/md'
 
 const builder = imageUrlBuilder(client);
 
@@ -23,12 +24,14 @@ export default function EducationModal( { education } ) {
               <button
                   href="#"
                   onClick={() => setIsNavOpen((prev) => !prev)}
-                  className=" transititext-primary text-black mx-1 my-1 px-2 text-sm
+                  className=" transititext-primary text-black mx-1 my-1 px-2 text-base font-bold
                                   border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"
                   data-te-toggle="tooltip"
                   title="Click for more info!"
               >
-                  {education.name}
+                  <span className="flex text-left">
+                      <MdOutlineSchool className="mr-4 mt-1"/>{education.name}
+                  </span>
               </button>
           </span>
 

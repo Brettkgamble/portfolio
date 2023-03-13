@@ -59,6 +59,11 @@ export default {
           title: 'From to period',
           type: 'string'
       },
+      {
+          name: 'grade',
+          title: 'Grade Received',
+          type: 'string'
+      },
     {
       name:'course',
       type: 'array',
