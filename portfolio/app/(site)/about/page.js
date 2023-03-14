@@ -149,7 +149,7 @@ export default function Resume() {
             <div className="flex flex-wrap">
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
                 <div className=" flex-none pt-8 pl-2 w-11/12 md:w-1/5 lg:w-1/6">
-                    <h1 className="pt-4 font-roboto-600 font-bold text-black text-3xl w-full uppercase
+                    <h1 className="pt-4 pl-4 font-roboto-600 font-bold text-black text-3xl w-full uppercase
                         text-start tracking-widest  ">ABOUT ME
                        <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
                     </h1>
@@ -207,7 +207,7 @@ export default function Resume() {
             <div className="flex flex-wrap">
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
                 <div className=" flex-none pt-2 pl-2 pb-4 w-11/12 md:w-1/5 lg:w-1/6">
-                    <h2 className=" font-roboto-600 font-bold text-black text-2xl w-full uppercase
+                    <h2 className="pl-4 font-roboto-600 font-bold text-black text-2xl w-full uppercase
                         text-start tracking-widest  ">Skills
                        <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
                     </h2>
@@ -229,7 +229,7 @@ export default function Resume() {
             <div className="flex flex-wrap">
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
                 <div className=" flex-none pt-2 pl-2 pb-4 w-11/12 md:w-1/5 lg:w-1/6">
-                    <h2 className=" font-roboto-600 font-bold text-black text-2xl w-full uppercase
+                    <h2 className="pl-4 font-roboto-600 font-bold text-black text-2xl w-full uppercase
                         text-start tracking-widest  ">Higher Education
                        <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
                     </h2>
@@ -250,7 +250,7 @@ export default function Resume() {
             <div className="flex flex-wrap">
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
                 <div className=" flex-none pt-2 pl-2 pb-4 w-11/12 md:w-1/5 lg:w-1/6">
-                    <h2 className=" font-roboto-600 font-bold text-black text-2xl w-full uppercase
+                    <h2 className="pl-4 font-roboto-600 font-bold text-black text-2xl w-full uppercase
                         text-start tracking-widest  ">Courses and Certificates
                        <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
                     </h2>
@@ -273,7 +273,7 @@ export default function Resume() {
             <div className="flex flex-wrap">
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
                 <div className=" flex-none pt-2 pl-2 pb-4 w-11/12 md:w-1/5 lg:w-1/6">
-                    <h2 className=" font-roboto-600 font-bold text-black text-2xl w-full uppercase
+                    <h2 className="pl-4 font-roboto-600 font-bold text-black text-2xl w-full uppercase
                         text-start tracking-widest  ">Experience
                        <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
                     </h2>
@@ -326,7 +326,7 @@ export default function Resume() {
                                             <div key = {id}
                                                  className="basis-full flex  ml-8  pt-3 justify-start w-full">
 
-                                                <div className=" font-roboto-400 text-black ">
+                                                <div className="font-roboto-400 text-black ">
                                                     <div>
                                                         <h3 className="text-black text-lg font-bold pb-4 -ml-4">
                                                             {role.period}

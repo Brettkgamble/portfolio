@@ -46,7 +46,7 @@ const serializers = {
               return style === "blockquote" ? (
                 <blockquote>– {props.children}</blockquote>
               ) : (
-                <p className="pb-4 text-base">{props.children}</p>
+                <p className="pb-4 pr-12 sm:pr-0 text-base">{props.children}</p>
               );
           },
         code: (props) => {
