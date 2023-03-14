@@ -214,8 +214,8 @@ export default function Resume() {
                 </div>
             </div>
             <div className="flex w-full justify-center py-8">
-                <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-2/6"></div>
-                <div className="flex flex-wrap w-3/6 md:pl-8">
+                <div className="hidden flex-none p-2 md:flex sm:w-1/12 md:w-2/6"></div>
+                <div className="flex flex-wrap w-full px-8 md:pl-8">
                     {person.skills.map((skill, id) => {
                       return (
                           <SkillModal key={id} skill={skill}/>
@@ -236,7 +236,7 @@ export default function Resume() {
                 </div>
             </div>
             <div className="flex w-full justify-center py-8">
-                <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-2/6"></div>
+                <div className="hidden flex-none p-2 md:flex sm:w-1/12 md:w-2/6"></div>
                 <div className="flex flex-wrap w-5/6 md:pl-8">
                     {person.higherEducation.map((higherEd, id) => {
                       return (
@@ -257,7 +257,7 @@ export default function Resume() {
                 </div>
             </div>
             <div className="flex w-full justify-center py-8">
-                <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-2/6"></div>
+                <div className="hidden flex-none p-2 md:flex sm:w-1/12 md:w-2/6"></div>
                 <div className="flex flex-wrap w-3/6 md:pl-8">
                     {person.coursesAndCerts.map((courses, id) => {
                       return (
