@@ -156,6 +156,12 @@ export default {
       type: 'array',
       of: [{ type: 'reference', to: {type: 'higherEducation'}}]
     },
+      {
+      name: 'continuousEducation',
+      title: 'Continuous Education',
+      type: 'array',
+      of: [{ type: 'reference', to: {type: 'continuousEducation'}}]
+    },
     {
       name: 'organizations',
       type: 'array',

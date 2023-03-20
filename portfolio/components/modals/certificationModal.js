@@ -15,7 +15,7 @@ function urlFor(source) {
     return builder.image(source)
 }
 
-export default function EducationModal( { education } ) {
+export default function CertificationModal( { education } ) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (

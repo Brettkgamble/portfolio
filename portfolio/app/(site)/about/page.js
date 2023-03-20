@@ -9,6 +9,7 @@ import {FaLinkedinIn } from 'react-icons/fa';
 
 import SkillModal from '../../../components/modals/skillModal';
 import EducationModal from "../../../components/modals/educationModal";
+import CertificationModal from "../../../components/modals/certificationModal";
 
 const builder = imageUrlBuilder(client);
 
@@ -45,8 +46,37 @@ const query = groq `
             }
           },
         coursesAndCerts[]->{
-            ...,
-        },
+            name,
+            courses[]->{
+                ...,
+              },
+            Organization[]->{
+              ...,
+               image{
+                alt,
+              asset->{
+                _id,
+                url
+              }
+            }
+            }
+          },
+          continuousEducation[]->{
+            name,
+            courses[]->{
+                ...,
+              },
+            Organization[]->{
+              ...,
+               image{
+                alt,
+              asset->{
+                _id,
+                url
+              }
+            }
+            }
+          },
         organizations[]->{
             name,
             url,
@@ -251,7 +281,7 @@ export default function Resume() {
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
                 <div className=" flex-none pt-2 pl-2 pb-4 w-11/12 md:w-1/5 lg:w-1/6">
                     <h2 className="pl-4 font-roboto-600 font-bold text-black text-2xl w-full uppercase
-                        text-start tracking-widest  ">Courses and Certificates
+                        text-start tracking-widest  ">Certifications
                        <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
                     </h2>
                 </div>
@@ -259,10 +289,9 @@ export default function Resume() {
             <div className="flex w-full justify-center py-8">
                 <div className="hidden flex-none p-2 md:flex sm:w-1/12 md:w-2/6"></div>
                 <div className="flex flex-wrap w-3/6 md:pl-8">
-                    {person.coursesAndCerts.map((courses, id) => {
-                      return (
-                          <li key={id} className="text-black w-full font-bold">{courses.name}</li>
-                          // <SkillModal key={skill.id} skill={skill}/>
+                    {person.coursesAndCerts.map((certs, id) => {
+                     return (
+                          <CertificationModal key={id} education={certs}/>
                       )  })}
                 </div>
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
@@ -357,6 +386,26 @@ export default function Resume() {
                     </>
                 )
             })}
+
+            <div className="flex flex-wrap">
+                <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
+                <div className=" flex-none pt-2 pl-2 pb-4 w-11/12 md:w-1/5 lg:w-1/6">
+                    <h2 className="pl-4 font-roboto-600 font-bold text-black text-2xl w-full uppercase
+                        text-start tracking-widest  ">Continuous Education
+                       <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
+                    </h2>
+                </div>
+            </div>
+            <div className="flex w-full justify-center py-8">
+                <div className="hidden flex-none p-2 md:flex sm:w-1/12 md:w-2/6"></div>
+                <div className="flex flex-wrap w-3/6 md:pl-8">
+                    {person.continuousEducation.map((contEd, id) => {
+                     return (
+                          <CertificationModal key={id} education={contEd}/>
+                      )  })}
+                </div>
+                <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
+            </div>
 
              {/*Grid Example*/}
                 {/*<div className="min-h-screen flex items-start justify-center">*/}

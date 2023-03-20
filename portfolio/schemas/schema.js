@@ -2,6 +2,7 @@
 import bioBlock from './bioBlock';
 import category from './category';
 import courses from "./courses";
+import continuousEducation from "./continuousEducation";
 import higherEducation from "./higherEducation";
 import organization from "./organization";
 import orgDescriptionBlock from "./orgDescriptionBlock";
@@ -18,6 +19,7 @@ export default [
     bioBlock,
     category,
     courses,
+    continuousEducation,
     higherEducation,
     organization,
     orgDescriptionBlock,
