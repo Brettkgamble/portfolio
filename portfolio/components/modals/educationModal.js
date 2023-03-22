@@ -80,9 +80,8 @@ export default function EducationModal( { education } ) {
                                       <>
                                         {education.courses.map((course, id)=> {
                                           return(
-                                              <span className=" inline-block mt-2">
+                                              <span key={id} className=" inline-block mt-2">
                                                   <span
-                                                      key={id}
                                                       className=" transititext-primary text-blue-800 mx-1 my-2 px-2 pt-1 text-sm
                                                                      border border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"
                                                       data-te-toggle="tooltip"
