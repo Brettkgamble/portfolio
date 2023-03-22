@@ -31,8 +31,12 @@ export default function EducationModal( { education } ) {
               >
                   <span className="flex text-left">
                       <MdOutlineSchool className="mr-4 mt-1"/>{education.name}
+
                   </span>
               </button>
+          </span>
+          <span className="block w-full">
+              <div className="text-sm text-black my-auto ml-12">{education.period}</div>
           </span>
 
           {/*  Overlay */}
@@ -67,24 +71,25 @@ export default function EducationModal( { education } ) {
                               />
                           </div>
                       </div>
-                      <h3 className="text-xl font-medium text-gray-900 ">{education.Organization[0].name}</h3>
-                      <h3 className="text-base font-medium text-gray-900 ">{education.name}
-
-                      </h3>
+                      <h3 className="text-xl pt-2 font-medium text-gray-900 ">{education.Organization[0].name}</h3>
+                      <h3 className="text-base pt-2 font-medium text-gray-900 ">{education.name}</h3>
+                      <h5 className="text-sm pt-2 font-medium text-gray-900 ">{education.period}</h5>
                       <div className="w-full flex-none py-4 ">
-                          <div className=" font-roboto-400 text-black pt-1">
+                          <div className=" font-roboto-400 text-black pt-2">
                               {education.courses ?
                                       <>
                                         {education.courses.map((course, id)=> {
                                           return(
-                                              <span
-                                                  key={id}
-                                                  className=" transititext-primary text-blue-800 mx-1 my-2 px-2 pb-1 text-sm
-                                                                 border border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"
-                                                  data-te-toggle="tooltip"
-                                                  title={course.name}
-                                              >
-                                                  {course.name}
+                                              <span className=" inline-block mt-2">
+                                                  <span
+                                                      key={id}
+                                                      className=" transititext-primary text-blue-800 mx-1 my-2 px-2 pt-1 text-sm
+                                                                     border border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"
+                                                      data-te-toggle="tooltip"
+                                                      title={course.name}
+                                                  >
+                                                      {course.name}
+                                                  </span>
                                               </span>
                                           )
                                           })}

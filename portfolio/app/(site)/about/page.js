@@ -31,6 +31,7 @@ const query = groq `
         },
         higherEducation[]->{
             name,
+            period,
             courses[]->{
                 ...,
               },
