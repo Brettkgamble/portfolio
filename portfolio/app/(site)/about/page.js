@@ -48,6 +48,7 @@ const query = groq `
           },
         coursesAndCerts[]->{
             name,
+            period,
             courses[]->{
                 ...,
               },
@@ -64,6 +65,7 @@ const query = groq `
           },
           continuousEducation[]->{
             name,
+            period,
             courses[]->{
                 ...,
               },
@@ -217,7 +219,7 @@ export default function Resume() {
                     </div>
                 </div>
                 <div className="w-full flex-none pt-16 px-8 md:w-2/4 lg:w-2/4">
-                    <div className=" font-roboto-400 text-black md:pt-16">
+                    <div className=" font-roboto-400 text-black  text-justify md:pt-16">
                         <section>
                             <BlockContent
                                 style={{fontSize: "3rem"}}
@@ -364,15 +366,17 @@ export default function Resume() {
                                                         <h2 className="text-black font-bold pb-4 -ml-4 text-blue-700">
                                                             {role.name}
                                                         </h2>
-                                                        <BlockContent
-                                                            className="-ml-4"
-                                                            style={{fontSize: "3rem"}}
-                                                            blocks={role.role}
-                                                            serializers={serializers}
-                                                            projectId={client.projectId}
-                                                            dataset={client.dataset}
-                                                            imageOptions={{w: 500, h: 440, fit: 'max'}}
-                                                        />
+                                                        <div className="text-justify">
+                                                            <BlockContent
+                                                                className="-ml-4"
+                                                                style={{fontSize: "3rem"}}
+                                                                blocks={role.role}
+                                                                serializers={serializers}
+                                                                projectId={client.projectId}
+                                                                dataset={client.dataset}
+                                                                imageOptions={{w: 500, h: 440, fit: 'max'}}
+                                                            />
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

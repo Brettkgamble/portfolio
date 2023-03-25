@@ -95,29 +95,6 @@ export default function EducationModal( { education } ) {
                                       </>
                                 : null
                               }
-                              {/*{skill.skillProficiency ?*/}
-                              {/*        <span*/}
-                              {/*            className=" transititext-primary text-blue-800 mx-1 my-2 px-2 pb-1 text-base*/}
-                              {/*                           border border-solid rounded-lg hover:bg-blue-200 transition duration-150 ease-in-out"*/}
-                              {/*            data-te-toggle="tooltip"*/}
-                              {/*            title={skill.skillProficiency[0].description}*/}
-                              {/*        >*/}
-                              {/*            {skill.skillProficiency[0].title}*/}
-                              {/*        </span>*/}
-                              {/*    : null}*/}
-                          </div>
-                      </div>
-                      <div className="w-full flex-none py-4 ">
-                          <div className=" font-roboto-400 text-black pt-1">
-                              {/*<section>*/}
-                              {/*    <BlockContent*/}
-                              {/*        blocks={skill.description[0].skill}*/}
-                              {/*        serializers={serializers}*/}
-                              {/*        projectId={client.projectId}*/}
-                              {/*        dataset={client.dataset}*/}
-                              {/*        imageOptions={{w: 500, h: 440, fit: 'max'}}*/}
-                              {/*    />*/}
-                              {/*</section>*/}
                           </div>
                       </div>
                       <div className="items-center px-4 py-3">
