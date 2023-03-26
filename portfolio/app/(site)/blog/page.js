@@ -9,7 +9,7 @@ import BlogHeader from '../../../components/headers/BlogHeader';
 import BlogBanner from "../../../components/banners/BlogBanner";
 
 
-export const query= groq
+const query= groq
     `
          *[_type=='post'] {
          ...,
