@@ -6,7 +6,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import Link from 'next/link';
 
-export default function MainNavigation(props) {
+export default function BlogNavigation(props) {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
     return (
@@ -54,14 +54,14 @@ export default function MainNavigation(props) {
                                        <Link
                                            href="/"
                                        >
-                                           Home
+                                           Home!
                                        </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
                                        <Link
                                            href="/about"
                                        >
-                                           About
+                                           About!
                                        </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
@@ -160,6 +160,6 @@ export default function MainNavigation(props) {
     )
 }
 
-MainNavigation.propTypes = {
+BlogNavigation.propTypes = {
     brand: PropTypes.string,
 }
