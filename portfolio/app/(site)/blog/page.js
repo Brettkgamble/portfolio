@@ -13,13 +13,13 @@ const query= groq
     `
          *[_type=='post'] {
          ...,
+         postIntroduction->,
          author->,
          categories[]->
          } | order(_createdAt desc)   
     `
 
 export default async function Blog() {
-
     if (previewData()) {
         return (
             <PreviewSuspense fallback={
@@ -35,7 +35,7 @@ export default async function Blog() {
     }
 
     const posts = await client.fetch(query)
-
+    console.log(posts)
     return (
         <div>
             <BlogHeader />

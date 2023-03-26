@@ -11,7 +11,10 @@ module.exports = {
     "./schemas/**/*.{js,ts,jsx,tsx}",
       "./node_modules/tw-elements/dist/js/**/*.js"
   ],
-  plugins: [require("tw-elements/dist/plugin")],
+  plugins: [
+      require("tw-elements/dist/plugin"),
+      require("@tailwindcss/line-clamp")
+  ],
   theme: {
     fontFamily: {
       'roboto': ['Roboto','sans-serif']
