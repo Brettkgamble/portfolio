@@ -7,6 +7,9 @@ import higherEducation from "./higherEducation";
 import organization from "./organization";
 import orgDescriptionBlock from "./orgDescriptionBlock";
 import person from './person';
+import post from './post';
+import postBodyBlock from "./postBodyBlock";
+import postCategory from "./postCategory";
 import roles from './roles';
 import skills from './skills';
 import skillBlock from "./skillBlock";
@@ -24,6 +27,9 @@ export default [
     organization,
     orgDescriptionBlock,
     person,
+    post,
+    postBodyBlock,
+    postCategory,
     roles,
     skills,
     skillBlock,
