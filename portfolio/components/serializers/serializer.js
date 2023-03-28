@@ -106,8 +106,7 @@ const serializers = {
           sub: (props) => <sub>{props.children}</sub>,
           textAlignLeft: (props) => <div style={{textAlign: "left"}}>{props.children}</div>,
           textAlignCenter: (props) => <div style={{textAlign: "center"}}>{props.children}</div>,
-          textAlignRight: (props) => <div style={{textAlign: "right"}}>{props.children}</div>
-
+          textAlignRight: (props) => <div style={{textAlign: "right"}}>{props.children}</div>,
       }
     }
 

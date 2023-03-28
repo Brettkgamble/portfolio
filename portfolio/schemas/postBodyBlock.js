@@ -40,7 +40,7 @@ const superScript= () => (
  *  }
  */
 export default {
-  title: 'Post Body Block',
+  title: 'Block Content',
   name: 'postBodyBlock',
   type: 'document',
   fields: [
@@ -50,7 +50,7 @@ export default {
           type: 'string'
       },
     {
-      name:'bio',
+      name:'body',
       type: 'array',
       of: [
         {

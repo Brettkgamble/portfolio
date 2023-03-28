@@ -6,6 +6,7 @@ import {media, mediaAssetSource} from 'sanity-plugin-media';
 import { myTheme } from './theme';
 import StudioNavbar from '../portfolio/components/navigation/StudioNavbar';
 import Logo from '../portfolio/components/navigation/logo';
+import { getDefaultDocumentNode} from "./structure";
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
@@ -16,7 +17,9 @@ export default defineConfig({
   title: "Brett Gamble Portfolio",
   projectId, //: "52vufthe",
   dataset, // : "production",
-  plugins: [deskTool(), visionTool(), media()],
+  plugins: [deskTool({
+    defaultDocumentNode:  getDefaultDocumentNode,
+  }), visionTool(), media()],
   // tools: (prev) => {
   //   // 👇 Uses environment variables set by Vite in development mode
   //   if (import.meta.env.DEV) {

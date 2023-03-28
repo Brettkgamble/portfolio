@@ -2161,10 +2161,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:13.2.5-canary.17":
-  version: 13.2.5-canary.17
-  resolution: "@next/env@npm:13.2.5-canary.17"
-  checksum: 03224c28f1f650928aecc4ed7e836692fb65cda64616138e3a45281a9bee2ba53d21f8b42ad01b3e3c5aa83d683b1cb453b694e51279aaccaf6e76f51b790916
+"@next/env@npm:13.2.5-canary.19":
+  version: 13.2.5-canary.19
+  resolution: "@next/env@npm:13.2.5-canary.19"
+  checksum: 4eca062dd1109d41f727fd5959133d8296c6380c1ba2cdd3f9ac5e999660397cb8bc5d30be131dd1eab5322c7a1c86cafde7b2eb66a03dad89d21b3cdfd36dd8
   languageName: node
   linkType: hard
 
@@ -2184,65 +2184,65 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:13.2.5-canary.17":
-  version: 13.2.5-canary.17
-  resolution: "@next/swc-darwin-arm64@npm:13.2.5-canary.17"
+"@next/swc-darwin-arm64@npm:13.2.5-canary.19":
+  version: 13.2.5-canary.19
+  resolution: "@next/swc-darwin-arm64@npm:13.2.5-canary.19"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:13.2.5-canary.17":
-  version: 13.2.5-canary.17
-  resolution: "@next/swc-darwin-x64@npm:13.2.5-canary.17"
+"@next/swc-darwin-x64@npm:13.2.5-canary.19":
+  version: 13.2.5-canary.19
+  resolution: "@next/swc-darwin-x64@npm:13.2.5-canary.19"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:13.2.5-canary.17":
-  version: 13.2.5-canary.17
-  resolution: "@next/swc-linux-arm64-gnu@npm:13.2.5-canary.17"
+"@next/swc-linux-arm64-gnu@npm:13.2.5-canary.19":
+  version: 13.2.5-canary.19
+  resolution: "@next/swc-linux-arm64-gnu@npm:13.2.5-canary.19"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:13.2.5-canary.17":
-  version: 13.2.5-canary.17
-  resolution: "@next/swc-linux-arm64-musl@npm:13.2.5-canary.17"
+"@next/swc-linux-arm64-musl@npm:13.2.5-canary.19":
+  version: 13.2.5-canary.19
+  resolution: "@next/swc-linux-arm64-musl@npm:13.2.5-canary.19"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:13.2.5-canary.17":
-  version: 13.2.5-canary.17
-  resolution: "@next/swc-linux-x64-gnu@npm:13.2.5-canary.17"
+"@next/swc-linux-x64-gnu@npm:13.2.5-canary.19":
+  version: 13.2.5-canary.19
+  resolution: "@next/swc-linux-x64-gnu@npm:13.2.5-canary.19"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:13.2.5-canary.17":
-  version: 13.2.5-canary.17
-  resolution: "@next/swc-linux-x64-musl@npm:13.2.5-canary.17"
+"@next/swc-linux-x64-musl@npm:13.2.5-canary.19":
+  version: 13.2.5-canary.19
+  resolution: "@next/swc-linux-x64-musl@npm:13.2.5-canary.19"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:13.2.5-canary.17":
-  version: 13.2.5-canary.17
-  resolution: "@next/swc-win32-arm64-msvc@npm:13.2.5-canary.17"
+"@next/swc-win32-arm64-msvc@npm:13.2.5-canary.19":
+  version: 13.2.5-canary.19
+  resolution: "@next/swc-win32-arm64-msvc@npm:13.2.5-canary.19"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:13.2.5-canary.17":
-  version: 13.2.5-canary.17
-  resolution: "@next/swc-win32-ia32-msvc@npm:13.2.5-canary.17"
+"@next/swc-win32-ia32-msvc@npm:13.2.5-canary.19":
+  version: 13.2.5-canary.19
+  resolution: "@next/swc-win32-ia32-msvc@npm:13.2.5-canary.19"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:13.2.5-canary.17":
-  version: 13.2.5-canary.17
-  resolution: "@next/swc-win32-x64-msvc@npm:13.2.5-canary.17"
+"@next/swc-win32-x64-msvc@npm:13.2.5-canary.19":
+  version: 13.2.5-canary.19
+  resolution: "@next/swc-win32-x64-msvc@npm:13.2.5-canary.19"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -7678,20 +7678,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:13.2.5-canary.17":
-  version: 13.2.5-canary.17
-  resolution: "next@npm:13.2.5-canary.17"
+"next@npm:13.2.5-canary.19":
+  version: 13.2.5-canary.19
+  resolution: "next@npm:13.2.5-canary.19"
   dependencies:
-    "@next/env": 13.2.5-canary.17
-    "@next/swc-darwin-arm64": 13.2.5-canary.17
-    "@next/swc-darwin-x64": 13.2.5-canary.17
-    "@next/swc-linux-arm64-gnu": 13.2.5-canary.17
-    "@next/swc-linux-arm64-musl": 13.2.5-canary.17
-    "@next/swc-linux-x64-gnu": 13.2.5-canary.17
-    "@next/swc-linux-x64-musl": 13.2.5-canary.17
-    "@next/swc-win32-arm64-msvc": 13.2.5-canary.17
-    "@next/swc-win32-ia32-msvc": 13.2.5-canary.17
-    "@next/swc-win32-x64-msvc": 13.2.5-canary.17
+    "@next/env": 13.2.5-canary.19
+    "@next/swc-darwin-arm64": 13.2.5-canary.19
+    "@next/swc-darwin-x64": 13.2.5-canary.19
+    "@next/swc-linux-arm64-gnu": 13.2.5-canary.19
+    "@next/swc-linux-arm64-musl": 13.2.5-canary.19
+    "@next/swc-linux-x64-gnu": 13.2.5-canary.19
+    "@next/swc-linux-x64-musl": 13.2.5-canary.19
+    "@next/swc-win32-arm64-msvc": 13.2.5-canary.19
+    "@next/swc-win32-ia32-msvc": 13.2.5-canary.19
+    "@next/swc-win32-x64-msvc": 13.2.5-canary.19
     "@swc/helpers": 0.4.14
     busboy: 1.6.0
     caniuse-lite: ^1.0.30001406
@@ -7734,7 +7734,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: bcb6ca93635bda52a5425e2a705aae9444eb1f88d39b7b84a1817e6eb60a18a821cda7680d65537b08b3af4e41083acd73b0c8e24c8ba77a2087f833f293a7bb
+  checksum: 5d989185edd896736199721bef19e40b172a40e89f410ecadf23068a6866129b294a091d081eecc0a9818b27b6264b6dd65c3080ac36dd7ddaaafc0ca1f978ea
   languageName: node
   linkType: hard
 
@@ -8316,7 +8316,7 @@ __metadata:
     cors: ^2.8.5
     eslint: 8.31.0
     eslint-config-next: 13.1.1
-    next: 13.2.5-canary.17
+    next: 13.2.5-canary.19
     next-sanity: ^4.1.5
     next-sanity-image: ^5.0.0
     postcss: ^8.4.20
@@ -8326,6 +8326,7 @@ __metadata:
     react-icons: ^4.7.1
     react-is: ^18.2.0
     sanity: latest
+    sanity-plugin-iframe-pane: ^2.3.0
     sanity-plugin-media: ^2.0.5
     styled-components: ^5.3.6
     supports-color: ^9.3.1
@@ -9256,6 +9257,21 @@ __metadata:
   dependencies:
     diff-match-patch: ^1.0.5
   checksum: 3e2f8a726197d9a6d577ae62ee81dffafd101ce9253e0e843405fc9d026e9395b88875b8147525a6ed423e2edc27ef7fe65e275b1f6b52be3657e2ea063c4f8b
+  languageName: node
+  linkType: hard
+
+"sanity-plugin-iframe-pane@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "sanity-plugin-iframe-pane@npm:2.3.0"
+  dependencies:
+    "@sanity/icons": ^2.2.2
+    "@sanity/incompatible-plugin": ^1.0.4
+    "@sanity/ui": ^1.3.0
+    usehooks-ts: ^2.9.1
+  peerDependencies:
+    react: ^18
+    sanity: ^3.0.0
+  checksum: 4066b9d7af66101532b75db7a3ffc5b6fac308475ed1a70a418328e0a5f4ae3081b3a7ebc25682a79b3b63300b124dee2547b0ac98707e466565aa31b2b29744
   languageName: node
   linkType: hard
 
@@ -10557,6 +10573,16 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
   checksum: 5c639e0f8da3521d605f59ce5be9e094ca772bd44a4ce7322b055a6f58eeed8dda3c94cabd90c7a41fb6fa852210092008afe48f7038792fd47501f33299116a
+  languageName: node
+  linkType: hard
+
+"usehooks-ts@npm:^2.9.1":
+  version: 2.9.1
+  resolution: "usehooks-ts@npm:2.9.1"
+  peerDependencies:
+    react: ^16.8.0  || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
+  checksum: 36f1e4142ce23bc019b81d2e93aefd7f2c350abcf255598c21627114a69a2f2f116b35dc3a353375f09c6e4c9b704a04f104e3d10e98280545c097feca66c30a
   languageName: node
   linkType: hard
 

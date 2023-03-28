@@ -1,9 +1,12 @@
+import postBodyBlock from "./postBodyBlock";
+import {mediaAssetSource} from "sanity-plugin-media";
+
 export default {
   name: 'post',
   title: 'Post',
   type: 'document',
   initialValue: {
-     likes: 0,
+    likes: 0,
     views: 0
   },
   fields: [
@@ -21,12 +24,7 @@ export default {
         maxLength: 96
       }
     },
-      {
-      name: 'Publish',
-      title: 'Publish',
-      type: 'boolean',
-      initialValue:  true
-    },
+
     {
       name: 'author',
       title: 'Author',
@@ -34,59 +32,47 @@ export default {
       to: {type: 'person'}
     },
     {
-     name: 'seoDescription',
-     title: 'SEO Description',
-     type: 'string',
-     description: 'Example: Car Detailing of 2012 Chevrolet Malibu'
-    },
-    {
-          type: 'image',
-          name: "mainImage",
-          fields: [
-            {
-              type: 'text',
-              name: 'alt',
-              title: 'Alternative Text',
-              description: `Some of your visitors cannot see images, be they blind, color-blind, low-sighted; 
-              alternative text is of great help for those people that can rely on it to have a good idea of 
-              what\'s on your page.`,
-              options: {
-                hotspot: true
-              },
-
-            },
-            {
-              type: 'string',
-              name: 'caption',
-              title: 'Caption',
-              description: `Image Caption`,
-            }
-          ]
-        },
-    {
       name: 'categories',
       title: 'Categories',
       type: 'array',
       of: [{type: 'reference', to: {type: 'postCategory'}}]
     },
-    {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime'
+      {
+      name: 'mainImage',
+      title: 'Main Image',
+      type: 'image',
+      fields: [
+        {
+          type: 'text',
+          name: 'alt',
+          title: 'Alternative Text',
+          description: `Some of your visitors cannot see images, be they blind, color-blind, low-sighted; 
+          alternative text is of great help for those people that can rely on it to have a good idea of 
+          what\'s on your page.`,
+          options: {
+            hotspot: true
+          }
+        },
+        {
+          type: 'url',
+          name: 'attribution_url',
+          title: 'Attribution Url',
+          description: 'Link to the creator for copyright attribution',
+          validation: Rule => Rule.uri({
+            scheme: ['http', 'https', 'mailto', 'tel']
+          })
+        }
+      ],
+      options: {
+        sources: [mediaAssetSource],
+        hotspot: true,
+      }
     },
      {
-      name: 'postIntroduction',
-      title: 'Introduction Text',
-      validation: Rule => Rule.required(),
-       description: 'This text appears in the Category Listing page as an introduction to your post.  When presented in the' +
-           'actual blog post, this section will appear before the post content and therefore should not be replicated ' +
-           'inside of the post itself.' ,
-      type: 'postBodyBlock'
-    },
-    {
       name: 'body',
-      title: 'Body',
-      type: 'postBodyBlock'
+      title: 'Post Body',
+      type: 'postBodyBlock',
+      // of: [{ type: 'reference', to: {type: 'postBodyBlock'}}]
     },
     {
       name: 'likes',
@@ -99,19 +85,5 @@ export default {
       type: 'number'
     }
   ],
-
-  preview: {
-    select: {
-      title: 'title',
-      author: 'person.name',
-      media: 'mainImage'
-    },
-    prepare(selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`
-      })
-    }
-  }
 }
 
