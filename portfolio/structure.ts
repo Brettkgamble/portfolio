@@ -16,7 +16,7 @@ export const getDefaultDocumentNode: DefaultDocumentNodeResolver = (
                     // OR a string
                     url: `${
                         process.env.NEXT_PUBLIC_VERCEL_URL || "http://localhost:3000"
-                    }/api/preview`,
+                    }/api/preview-blog-list`,
                     // optionalL Set the default size
                     defaultSize: `desktop`, //default desktop
                     // Optional: Add a reload button, or rleoad on new document revisions
