@@ -1,6 +1,5 @@
 // Then import schema types from any plugins that might expose them
 import bioBlock from './bioBlock';
-import category from './category';
 import courses from "./courses";
 import continuousEducation from "./continuousEducation";
 import higherEducation from "./higherEducation";
@@ -20,7 +19,6 @@ import address from './address';
 export default [
     address,
     bioBlock,
-    category,
     courses,
     continuousEducation,
     higherEducation,
