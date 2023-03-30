@@ -62,7 +62,7 @@ export default async function Blog() {
                          <div className="grid grid-cols-1 pb-24">
                              {categories.map((category) => {
                                  return (
-                                     <div className="text-white py-1">
+                                     <div key={category._id} className="text-white py-1">
                                          {category.title}
                                      </div>
                                  )
