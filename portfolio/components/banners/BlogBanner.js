@@ -12,7 +12,7 @@ function BlogBanner() {
                 </h2>
             </div>
             <p className="mt-5 md:mt-2 text-gray-400 max-w-sm">
-                Rants and Discussions | Books & Music | Full Stack Tech & More!
+                Rants and Raves | Books & Music | Full Stack Tech & More!
             </p>
         </div>
     )

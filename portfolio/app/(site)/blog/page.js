@@ -53,7 +53,7 @@ export default async function Blog() {
                 <BlogBanner />
             </div>
              <div className="max-w-7xl mx-auto">
-                 <hr className="border-[#F7AB0A] mb-10" />
+                 {/*<hr className="border-[#F7AB0A] mb-10" />*/}
                  <div className="flex flex-wrap">
                      {/*for small screens < lg*/}
                      <div className=" text-white w-full pr-4 pl-8 lg:w-4/5 lg:hidden">
