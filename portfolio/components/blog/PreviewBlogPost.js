@@ -1,9 +1,7 @@
 "use client"
 
-import { usePreview } from "../../lib/sanity.preview";
 import BlogPost from '../blog/BlogPost'
 
-export default function PreviewBlogPost({ slug, params }) {
-    console.log('POST', params)
+export default function PreviewBlogPost({ query }) {
     return <BlogPost posts={query} />
 }

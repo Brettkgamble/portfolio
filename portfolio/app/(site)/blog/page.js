@@ -54,21 +54,28 @@ export default async function Blog() {
              <div className="max-w-7xl mx-auto">
                  <hr className="border-[#F7AB0A] mb-10" />
                  <div className="flex flex-wrap">
-                     <div className="w-full pt-16 px-8 lg:w-4/5">
+                     <div className=" text-white w-full pr-4 pl-8 lg:w-4/5 lg:hidden">
+                         <div className="text-white text-2xl pb-2 pl-10 ">Categories</div>
+                         <div className="flex flex-col pl-10 md:flex-row gap-y-2 md:gap-x-2 items-center">
+                            {categories.map((category) => (
+                                <div key={category._id} className="bg-[#F7AB0A] text-center text-black px-3 py-1 rounded-full text-xs font-semibold">
+                                    <p>{category.title}</p>
+                                </div>
+                            ))}
+                        </div>
+                     </div>
+                     <div className="w-full pt-16 pl-8 lg:w-4/5">
                         <BlogList posts={posts}/>
                      </div>
-                     <div className="hidden text-white pt-16 pl-2 w-11/12 lg:block lg:w-1/5 ">
+                     <div className="hidden text-white pt-16 w-11/12 pr-4 lg:block lg:w-1/5 ">
                          <div className="text-white text-2xl pb-2">Categories</div>
-                         <div className="grid grid-cols-1 pb-24">
-                             {categories.map((category) => {
-                                 return (
-                                     <div key={category._id} className="text-white py-1">
-                                         {category.title}
-                                     </div>
-                                 )
-
-                             })}
-                         </div>
+                         <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
+                            {categories.map((category) => (
+                                <div key={category._id} className="bg-[#F7AB0A] text-center text-black px-3 py-1 rounded-full text-xs font-semibold">
+                                    <p>{category.title}</p>
+                                </div>
+                            ))}
+                        </div>
                      </div>
                  </div>
              </div>

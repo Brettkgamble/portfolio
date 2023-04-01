@@ -17,7 +17,7 @@ export default function Home() {
                     <div className="flex relative justify-center items-center ">
                         <a href="https://reactjs.org" target="_blank" rel="noreferrer">
                             <Image
-                                // className={styles.logo}
+                                className="w-3/5 m-auto"
                                 src="/react.svg"
                                 alt="React Logo"
                                 width={120}
@@ -32,6 +32,7 @@ export default function Home() {
                     <div className="flex relative justify-center items-center">
                         <a href="https://nextjs.org" target="_blank" rel="noreferrer">
                             <Image
+                                className="w-3/5 m-auto"
                                 src="/next.svg"
                                 alt="Next.js Logo"
                                 width={120}
@@ -45,6 +46,7 @@ export default function Home() {
                     <div className="flex relative justify-center items-center ">
                         <a href="https://vercel.com/" target="_blank" rel="noreferrer">
                         <Image
+                             className="w-3/5 m-auto"
                             src="/vercel.svg"
                             alt="Vercel Logo"
                             width={120}
@@ -58,11 +60,11 @@ export default function Home() {
                     <div className="flex relative justify-center items-center ">
                         <a href="https://sanity.io" target="_blank" rel="noreferrer">
                         <Image
-                            // className={styles.logo}
+                            className="w-3/5 m-auto"
                             src="/sanity-logo.png"
                             alt="Sanity.io Logo"
-                            width={120}
-                            height={37}
+                            width={180}
+                            height={57}
                             priority
                           />
                         </a>
