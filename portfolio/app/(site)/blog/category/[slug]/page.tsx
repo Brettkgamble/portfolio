@@ -1,13 +1,10 @@
 import { groq } from 'next-sanity';
 import { client } from '../../../../../lib/sanity.client';
-import Image from 'next/image';
-import urlFor from '../../../../../lib/urlFor';
-import { PortableText } from "@portabletext/react";
-import {RichTextComponents} from "../../../../../components/richtext/RichTextComponents";
 import BlogList from '../../../../../components/blog/BlogList'
 import BlogHeader from '../../../../../components/headers/BlogHeader';
 import BlogBanner from "../../../../../components/banners/BlogBanner";
 import ClientSideRoute from "../../../../../components/ClientSideRoute";
+import Categories from "../../../../../components/blog/Categories";
 
 type Props = {
     params: {
@@ -69,21 +66,13 @@ async function Category({ params: {slug}}: Props) {
                 <BlogHeader />
                 <BlogBanner />
             </div>
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto pt-8">
                 {/*<hr className="border-[#F7AB0A] mb-10" />*/}
                 <div className="flex flex-wrap">
                      {/*for small screens < lg*/}
                      <div className=" text-white w-full pr-4 pl-8 lg:w-4/5 lg:hidden">
-                         <div className="text-white text-2xl pb-2 pl-10 ">Categories</div>
-                         <div className="flex flex-col pl-10 md:flex-row gap-y-2 md:gap-x-2 items-center">
-                            {categories.map((category) => (
-                                <div key={category._id} className="bg-[#F7AB0A] text-center text-black px-3 py-1 rounded-full text-xs font-semibold">
-                                    <p>{category.title}</p>
-                                </div>
-                            ))}
-                        </div>
+                         <Categories categories={categories} />
                      </div>
-
                     <div className="flex flex-col w-full  lg:flex-row lg:space-x-5 justify-between font-bold px-20 mb-10">
                         <div>
                             <div className="bg-[#F7AB0A] text-center text-black px-3 py-1 rounded-full text-xs font-semibold">
@@ -96,16 +85,7 @@ async function Category({ params: {slug}}: Props) {
                     </div>
                     {/*Screens lg and above*/}
                     <div className="hidden text-white  w-11/12 pr-4 lg:block lg:w-1/5 ">
-                        <div className="text-white text-2xl pb-2">Categories</div>
-                        <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
-                            {categories.map((category) => (
-                                <ClientSideRoute key={category._id} route={`/blog/category/${category.slug.current}`}>
-                                    <div key={category._id} className="bg-[#F7AB0A] text-center text-black px-3 py-1 rounded-full text-xs font-semibold">
-                                        <p>{category.title}</p>
-                                    </div>
-                                </ClientSideRoute>
-                            ))}
-                        </div>
+                        <Categories categories={categories} />
                     </div>
                 </div>
             </div>
