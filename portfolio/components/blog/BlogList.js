@@ -46,7 +46,7 @@ function BlogList({ posts }) {
                                 <p className="line-clamp-2 text-gray-500">{post.seoDescription}</p>
                             </div>
                             <p className="mt-5 font-bold flex items-center group-hover:underline">
-                                Read Post
+                                Read Post...
                                 <BsBoxArrowUpRight className="ml-2 h-4 w-4" />
                             </p>
                         </div>
