@@ -2,6 +2,6 @@
 
 export default function previewBlogList(req, res) {
     res.setPreviewData({});
-    res.writeHead(307, { Location: "/blog"});
+    res.writeHead(307, { Location: "/blog/"});
     res.end();
 }

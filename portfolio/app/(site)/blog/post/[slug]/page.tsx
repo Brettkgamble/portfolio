@@ -5,10 +5,13 @@ import urlFor from '../../../../../lib/urlFor';
 import { PortableText } from "@portabletext/react";
 import {RichTextComponents} from "../../../../../components/richtext/RichTextComponents";
 import Categories from '../../../../../components/blog/Categories';
+import PreviewSuspense from '../../../../../lib/PreviewSuspense';
+import { previewData } from "next/headers";
+import BlogPost from '../../../../../components/blog/BlogPost'
+import PreviewBlogPost from '../../../../../components/blog/PreviewBlogPost'
 
 import BlogHeader from '../../../../../components/headers/BlogHeader';
 import BlogBanner from "../../../../../components/banners/BlogBanner";
-import ClientSideRoute from "../../../../../components/ClientSideRoute";
 
 type Props = {
     params: {
@@ -16,26 +19,7 @@ type Props = {
     }
 }
 
-export const revalidate = 30; // revalidates the page every 30 seconds
-
-export async function generateStaticParams() {
-    const query = groq `*[_type=='post']
-    {
-    slug,
-    }`;
-    //
-    // const slugs: Post[] =await client.fetch(query)
-    const slugs = await client.fetch(query)
-    const slugRoutes = slugs.map((slug) => slug.slug.current);
-
-    return slugRoutes.map(slug => ({
-        slug,
-    }))
-}
-
-async function Post({ params: {slug}}: Props) {
-
-    const query = groq `
+const query = groq `
        *[_type=='post' && slug.current == $slug][0]
        {
         ...,
@@ -45,14 +29,34 @@ async function Post({ params: {slug}}: Props) {
         } 
     `
 
-    const categoryQuery = groq
-    `
-        *[_type=='postCategory'] {
-            ...,
-        }
-    `
-    // const post: Post = await client.fetch(query, {slug} )
+const categoryQuery = groq
+`
+    *[_type=='postCategory'] {
+        ...,
+    }
+`
+export const revalidate = 30;
+
+export default async function Post({ params: {slug}}: Props) {
+
     const post = await client.fetch(query, {slug} )
+    const queryParams = { slug }
+
+        if (previewData()) {
+            return (
+                <PreviewSuspense fallback={
+                    <div role="status">
+                        <p className="text-center text-lg animate-pulse text-[#F71B0A]">
+                            Loading Preview Data...
+                        </p>
+                    </div>
+                }>
+                <PreviewBlogPost query={query} queryParams={queryParams}/>
+                </PreviewSuspense>
+            )
+         }
+
+    // const post = await client.fetch(query, {slug} )
     const categories = await client.fetch(categoryQuery)
 
     return (
@@ -132,4 +136,3 @@ async function Post({ params: {slug}}: Props) {
     )
 }
 
-export default Post;

@@ -4,7 +4,6 @@ import { client } from '../../../lib/sanity.client';
 import PreviewSuspense from '../../../lib/PreviewSuspense'
 import PreviewBlogList from "../../../components/blog/PreviewBlogList";
 import BlogList from "../../../components/blog/BlogList";
-import ClientSideRoute from "../../../components/ClientSideRoute";
 import Categories from '../../../components/blog/Categories'
 
 import BlogHeader from '../../../components/headers/BlogHeader';
