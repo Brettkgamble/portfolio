@@ -7,7 +7,6 @@ import {RichTextComponents} from "../../../../../components/richtext/RichTextCom
 import Categories from '../../../../../components/blog/Categories';
 import PreviewSuspense from '../../../../../lib/PreviewSuspense';
 import { previewData } from "next/headers";
-import BlogPost from '../../../../../components/blog/BlogPost'
 import PreviewBlogPost from '../../../../../components/blog/PreviewBlogPost'
 
 import BlogHeader from '../../../../../components/headers/BlogHeader';

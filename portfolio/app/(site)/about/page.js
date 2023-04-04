@@ -109,6 +109,8 @@ const query = groq `
 
 const p = await client.fetch(query)
 
+export const revalidate = 30;
+
 function urlFor(source) {
     return builder.image(source)
 }

@@ -6,7 +6,6 @@ import {PortableText} from "@portabletext/react";
 import {RichTextComponents} from "../richtext/RichTextComponents";
 
 function BlogPost({ post }) {
-    console.log('Post', post)
     return (
         <div>
             <BlogHeader/>
