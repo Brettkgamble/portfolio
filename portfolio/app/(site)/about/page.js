@@ -185,7 +185,7 @@ export default function Resume() {
                 <div className="hidden flex-none p-2 sm:flex sm:w-1/12 md:w-1/6"></div>
                 <div className=" flex-none pt-8 pl-2 w-11/12 md:w-1/5 lg:w-1/6">
                     <h1 className="pt-4 pl-4 font-roboto-600 font-bold text-black text-3xl w-full uppercase
-                        text-start tracking-widest  ">ABOUT ME
+                        text-start tracking-widest  ">ABOUT ME!
                        <hr className="mt-2 w-64 h-2 dark:bg-blue-700"/>
                     </h1>
                     <div className="relative flex bg-white flex-col justify-center py-8 sm:w-4/5 ">
