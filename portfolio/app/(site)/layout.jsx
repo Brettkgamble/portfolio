@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
         <AnalyticsWrapper />
       </body>
       {/*Google tag (gtag.js) */}
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-LKQZPYZYXX"></Script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-SVKRH289W0"></Script>
         <Script
             id='gtm-script'
             strategy="afterInteractive"
@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
 
-                gtag('config', 'G-LKQZPYZYXX');
+                gtag('config', 'G-SVKRH289W0');
                 }`
             }}
 
