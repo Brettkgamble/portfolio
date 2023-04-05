@@ -28,6 +28,11 @@ const categoryQuery = groq
     `
 export const revalidate = 30;
 
+
+
+const posts = await client.fetch(query)
+const categories = await client.fetch(categoryQuery)
+
 export default async function Blog() {
     if (previewData()) {
         return (
@@ -43,8 +48,7 @@ export default async function Blog() {
         )
     }
 
-    const posts = await client.fetch(query)
-    const categories = await client.fetch(categoryQuery)
+
     return (
         <div>
             <div className="max-w-7xl mx-auto">
