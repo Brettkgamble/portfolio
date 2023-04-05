@@ -1,4 +1,5 @@
 import { groq } from 'next-sanity';
+import type { Metadata } from "next";
 import { client } from '../../../../../lib/sanity.client';
 import Image from 'next/image';
 import urlFor from '../../../../../lib/urlFor';
@@ -36,9 +37,70 @@ const categoryQuery = groq
 `
 export const revalidate = 30;
 
+export async function generateMetadata({ params: {slug} }): Promise<Metadata> {
+  const post = await client.fetch(query, {slug} )
+  return {
+      title: post.title,
+      description: post.seoDescription,
+      generator: 'Next.js',
+      applicationName: 'Brett Gamble - Portfolio',
+      referrer: 'origin-when-cross-origin',
+      keywords: ['Next.js', 'React', 'JavaScript', 'Sanity.io', 'Vercel'],
+      authors: [{ name: post.author.name, url: 'https://brettkgamble.com' }],
+      colorScheme: 'dark',
+      creator: post.author.name,
+      publisher: post.author.name,
+      alternates: {},
+      formatDetection: {
+          email: false,
+          address: false,
+          telephone: false,
+    },
+      openGraph: {
+        title: post.title,
+        description: "Contains the CV, portfolio, and blog of Brett Gamble who is originally from Sydney, Australia but now resides" +
+        "in Edmonton, Alberta, Canada",
+        url: 'https://www.brettkgamble.com',
+        siteName: 'Brett Gamble - Portfolio',
+        type: 'article',
+        publishedTime: '2023-01-01T00:00:00.000Z',
+        authors: [post.name],
+        locale: 'en-US',
+        // images: [
+        //   {
+        //     url: 'https://nextjs.org/og.png',
+        //     width: 800,
+        //     height: 600,
+        //   },
+        //   {
+        //     url: 'https://nextjs.org/og-alt.png',
+        //     width: 1800,
+        //     height: 1600,
+        //     alt: 'My custom alt',
+        //   },
+        // ],
+
+  },
+      robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  }
+}
+
 export default async function Post({ params: {slug}}: Props) {
 
     const post = await client.fetch(query, {slug} )
+    console.log('Post', post)
     const queryParams = { slug }
 
         if (previewData()) {
