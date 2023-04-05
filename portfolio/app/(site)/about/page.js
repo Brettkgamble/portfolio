@@ -117,12 +117,12 @@ function urlFor(source) {
 
 export const metadata ={
     title: "The Curriculum Vitae of Brett Gamble",
-    description: "The full work experience for Brett Gamble who is originally from Sydney, Australia but now resides" +
-        "in Edmonton, Alberta, Canada",
+    description: "Detailed work history, education and skill set of Brett Gamble",
     generator: 'Next.js',
     applicationName: 'Brett Gamble - Portfolio',
     referrer: 'origin-when-cross-origin',
-    keywords: ['Next.js', 'React', 'JavaScript', 'Sanity.io', 'Vercel'],
+    keywords: ['Brett K Gamble', 'Brett Gamble', 'Curriculum Vitae', 'Resume', 'Portfolio', 'Brett Gamble Edmonton',
+    'Brett Gamble Heathcote High School'],
     authors: [{ name: 'Brett Gamble', url: 'https://brettkgamble.com' }],
     colorScheme: 'dark',
     creator: 'Brett Gamble',
@@ -135,11 +135,10 @@ export const metadata ={
     },
     openGraph: {
         title: "The Curriculum Vitae of Brett Gamble",
-        description: "The full work experience for Brett Gamble who is originally from Sydney, Australia but now resides" +
-        "in Edmonton, Alberta, Canada",
+        description: "Detailed work history, education and skill set of Brett Gamble",
         url: 'https://www.brettkgamble.com',
         siteName: 'Brett Gamble - Portfolio',
-        type: 'article',
+        type: 'website',
         publishedTime: '2023-01-01T00:00:00.000Z',
         authors: ['Brett Gamble'],
         locale: 'en-US',

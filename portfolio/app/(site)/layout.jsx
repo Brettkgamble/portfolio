@@ -3,6 +3,7 @@ import './globals.css';
 
 import { AnalyticsWrapper } from "../../components/analytics";
 import MainNavigation from "../../components/navigation/mainNavigation";
+import Script from 'next/script'
 
 const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
@@ -76,6 +77,17 @@ export default function RootLayout({ children }) {
         {children}
         <AnalyticsWrapper />
       </body>
+      {/*Google tag (gtag.js) */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-LKQZPYZYXX"></Script>
+        <Script
+            {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-LKQZPYZYXX');
+            `}
+        />
     </html>
   )
 }
