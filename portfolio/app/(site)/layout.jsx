@@ -3,7 +3,7 @@ import './globals.css';
 
 import { AnalyticsWrapper } from "../../components/analytics";
 import MainNavigation from "../../components/navigation/mainNavigation";
-import Script from 'next/script'
+import Script from 'next/script';
 
 const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
@@ -11,7 +11,7 @@ const roboto_mono = Roboto_Mono({
   display: 'optional',
 });
 
-export { meta_data as metadata } from '../../components/metadata/metadata'
+export { main_meta_data as metadata } from '../../components/metadata/Main_metadata'
 
 export default function RootLayout({ children }) {
   return (

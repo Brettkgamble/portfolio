@@ -29,6 +29,8 @@ export async function generateStaticParams() {
     }))
 }
 
+export { Category_meta_data as metadata } from '../../../../../components/metadata/Category_metadata';
+
 async function Category({ params: {slug}}: Props) {
 
     const posts = groq

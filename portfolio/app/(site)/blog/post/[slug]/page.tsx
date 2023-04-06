@@ -37,6 +37,7 @@ const categoryQuery = groq
 `
 export const revalidate = 30;
 
+
 export async function generateMetadata({ params: {slug} }): Promise<Metadata> {
   const post = await client.fetch(query, {slug} )
   return {
