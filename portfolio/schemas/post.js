@@ -38,6 +38,17 @@ export default {
       of: [{type: 'reference', to: {type: 'postCategory'}}]
     },
       {
+      name: 'seoDescription',
+      title: 'SEO Description',
+      type: 'string'
+    },
+      {
+      name: 'seoKeywords',
+      title: 'SEO Keywords',
+      type: 'array',
+      of: [{type: 'string'}]
+    },
+      {
       name: 'mainImage',
       title: 'Main Image',
       type: 'image',

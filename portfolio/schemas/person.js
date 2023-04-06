@@ -189,6 +189,24 @@ export default {
                 },
             ]
         },
+      {
+            name: 'websiteUrl',
+            title: 'Website Url',
+            type: 'object',
+            description: "Website",
+            fields: [
+                {
+                    title: 'Url',
+                    name: 'href',
+                    type: 'url',
+                    validation: Rule =>
+                        Rule.uri({
+                            allowRelative: true,
+                            scheme: ['https', 'http', 'mailto', 'tel']
+                        })
+                },
+            ]
+        },
 
     //   {
     //         name: 'address',

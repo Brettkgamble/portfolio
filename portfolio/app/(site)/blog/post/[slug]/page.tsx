@@ -45,8 +45,8 @@ export async function generateMetadata({ params: {slug} }): Promise<Metadata> {
       generator: 'Next.js',
       applicationName: 'Brett Gamble - Portfolio',
       referrer: 'origin-when-cross-origin',
-      keywords: ['Next.js', 'React', 'JavaScript', 'Sanity.io', 'Vercel'],
-      authors: [{ name: post.author.name, url: 'https://brettkgamble.com' }],
+      keywords: post.seoKeywords,
+      authors: [{ name: post.author.name, url: post.author.websiteUrl.href}],
       colorScheme: 'dark',
       creator: post.author.name,
       publisher: post.author.name,
@@ -58,8 +58,7 @@ export async function generateMetadata({ params: {slug} }): Promise<Metadata> {
     },
       openGraph: {
         title: post.title,
-        description: "Contains the CV, portfolio, and blog of Brett Gamble who is originally from Sydney, Australia but now resides" +
-        "in Edmonton, Alberta, Canada",
+        description:post.seoDescription,
         url: 'https://www.brettkgamble.com',
         siteName: 'Brett Gamble - Portfolio',
         type: 'article',
