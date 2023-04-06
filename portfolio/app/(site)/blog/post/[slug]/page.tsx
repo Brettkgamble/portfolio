@@ -100,7 +100,6 @@ export async function generateMetadata({ params: {slug} }): Promise<Metadata> {
 export default async function Post({ params: {slug}}: Props) {
 
     const post = await client.fetch(query, {slug} )
-    console.log('Post', post)
     const queryParams = { slug }
 
         if (previewData()) {

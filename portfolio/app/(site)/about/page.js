@@ -121,7 +121,6 @@ export { CV_meta_data as metadata } from '../../../components/metadata/CV_metada
 export default function Resume() {
 
     const person = p[0]
-    // console.log('Person', person)
 
     return (
         <div className="bg-white pb-32">

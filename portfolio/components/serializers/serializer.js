@@ -88,14 +88,12 @@ const serializers = {
 
       },
       list: (props) =>
-        // console.log("list", props) ||
         (props.type === "bullet" ? (
           <ul className="list-disc list-outside text-base">{props.children}</ul>
         ) : (
           <ol className="list-decimal list-outside  text-base pl-4 pb-6">{props.children}</ol>
         )),
       listItem: (props) =>
-        // console.log("list", props) ||
         (props.type === "bullet" ? (
           <li className="text-base">{props.children}</li>
         ) : (
