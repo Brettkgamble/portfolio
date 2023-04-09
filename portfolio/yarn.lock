@@ -6133,7 +6133,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^11.1.0":
+"globby@npm:^11.0.1, globby@npm:^11.1.0":
   version: 11.1.0
   resolution: "globby@npm:11.1.0"
   dependencies:
@@ -8316,6 +8316,7 @@ __metadata:
     cors: ^2.8.5
     eslint: 8.31.0
     eslint-config-next: 13.1.1
+    globby: ^11.0.1
     next: 13.2.5-canary.19
     next-sanity: ^4.1.5
     next-sanity-image: ^5.0.0

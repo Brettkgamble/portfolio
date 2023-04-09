@@ -7,18 +7,13 @@ const nextConfig = {
     images: {
       domains: ["links.papareact.com", "cdn.sanity.io"]
     },
-   webpack(config) {
+   webpack(config, { isServer }) {
+      if (isServer) {
+          require("./scripts/sitemap-generator")
+      }
     config.experiments = { ...config.experiments, topLevelAwait: true }
     return config
   },
-    async rewrites() {
-      return [
-          {
-              source: '/sitemap.xml',
-              destination: '/api/sitemap'
-          }
-      ]
-    }
 }
 
 module.exports = nextConfig
