@@ -8,9 +8,6 @@ const nextConfig = {
       domains: ["links.papareact.com", "cdn.sanity.io"]
     },
    webpack(config, { isServer }) {
-      if (isServer) {
-          require("./scripts/sitemap-generator")
-      }
     config.experiments = { ...config.experiments, topLevelAwait: true }
     return config
   },
