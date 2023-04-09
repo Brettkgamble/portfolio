@@ -2,7 +2,7 @@
 
 import { getSortedPostsData} from '../../lib/getSortedPostsData';
 
-const URL = "https://brettkgamble.com";
+const URL = "https://www.brettkgamble.com";
 
 function generateSiteMap(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
