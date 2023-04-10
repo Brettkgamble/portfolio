@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import urlFor from "../../lib/urlFor";
+import { Source_Code_Pro} from '@next/font/google'
+
+const source_code_pro= Source_Code_Pro({
+    weight: '200',
+    subsets: ['latin']
+})
 
 export const RichTextComponents = {
     types: {
@@ -16,6 +22,15 @@ export const RichTextComponents = {
                 </div>
             );
         },
+        code: ( {value} : any) => {
+            return (
+                <div className={source_code_pro.className}>
+                    <p className="text-white text-sm px-4 py-2 mx-6 my-4 bg-stone-700 rounded-xl">
+                        {value.code}
+                    </p>
+                </div>
+            )
+        }
     },
     list: {
         bullet: ({ children }: any)  => (
@@ -25,6 +40,7 @@ export const RichTextComponents = {
             <ol className="mt-lg list-decimal">{children}</ol>
         ),
     },
+
     block: {
         h1: ({ children}: any) => (
                <h1 className="text-5xl py-10 font-bold">{children}</h1>
@@ -38,6 +54,10 @@ export const RichTextComponents = {
         h4: ({ children}: any) => (
                <h1 className="text-2xl py-10 font-bold">{children}</h1>
         ),
+        normal: ({children}: any) => (
+            <p className="pb-2 text-lg">{children}</p>
+        ),
+
 
         blockquote: ({children}: any) => (
             <blockquote className="border-l-[#F7AB0A] border-l-4 pl-5 py-5 my-5">

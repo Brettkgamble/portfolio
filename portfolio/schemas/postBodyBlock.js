@@ -160,6 +160,10 @@ export default {
               description: `Image Caption`,
             }
           ]
+        },
+        {
+          type:'code',
+          title: 'Code'
         }
       ]
     }]

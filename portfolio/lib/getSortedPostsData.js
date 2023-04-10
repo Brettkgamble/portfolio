@@ -7,10 +7,9 @@ export async function getSortedPostsData() {
     slug,
     }`;
     //
-    // const slugs: Post[] =await client.fetch(query)
     const slugs = await client.fetch(query)
     const slugRoutes = slugs.map((slug) => slug.slug.current);
-    // console.log('SlugRoutes', slugRoutes)
+
     return slugRoutes.map(slug => ({
         slug,
     }))

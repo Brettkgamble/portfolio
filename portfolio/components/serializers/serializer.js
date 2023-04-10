@@ -4,7 +4,6 @@ import { client } from '../../lib/sanity.client'
 import imageUrlBuilder from '@sanity/image-url';
 import Image from 'next/legacy/image'
 
-
 const builder = imageUrlBuilder(client);
 
 function urlFor(source) {

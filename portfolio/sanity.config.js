@@ -7,6 +7,7 @@ import { myTheme } from './theme';
 import StudioNavbar from '../portfolio/components/navigation/StudioNavbar';
 import Logo from '../portfolio/components/navigation/logo';
 import { getDefaultDocumentNode} from "./structure";
+import {codeInput} from "@sanity/code-input";
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
@@ -19,7 +20,7 @@ export default defineConfig({
   dataset, // : "production",
   plugins: [deskTool({
     defaultDocumentNode:  getDefaultDocumentNode,
-  }), visionTool(), media()],
+  }), visionTool(), media(), codeInput()],
   // tools: (prev) => {
   //   // 👇 Uses environment variables set by Vite in development mode
   //   if (import.meta.env.DEV) {
