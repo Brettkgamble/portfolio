@@ -1,5 +1,3 @@
-// import { getSortedPostsData } from '../test/page';
-
 import { getSortedPostsData} from '../../lib/getSortedPostsData';
 
 const URL = "https://www.brettkgamble.com";

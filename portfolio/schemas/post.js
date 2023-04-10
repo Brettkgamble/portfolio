@@ -46,7 +46,7 @@ export default {
       name: 'seoKeywords',
       title: 'SEO Keywords',
       type: 'array',
-      of: [{type: 'string'}]
+      of: [{type: 'reference', to: {type: 'keywords'}}]
     },
       {
       name: 'mainImage',
