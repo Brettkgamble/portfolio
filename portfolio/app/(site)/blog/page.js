@@ -1,4 +1,4 @@
-import { previewData} from "next/headers";
+// import { previewData } from "next/headers";
 import { groq } from 'next-sanity';
 import { client } from '../../../lib/sanity.client';
 import PreviewSuspense from '../../../lib/PreviewSuspense'
@@ -35,25 +35,25 @@ const categories = await client.fetch(categoryQuery)
 export { BlogList_meta_data as metadata } from '../../../components/metadata/BlogList_metadata';
 
 export default async function Blog() {
-    if (previewData()) {
-        return (
-            <PreviewSuspense fallback={
-                <div role="status">
-                    <p className="text-center text-lg animate-pulse text-[#F71B0A]">
-                        Loading Preview Data...
-                    </p>
-                </div>
-            }>
-            <PreviewBlogList query={query} />
-            </PreviewSuspense>
-        )
-    }
+    // if (previewData()) {
+    //     return (
+    //         <PreviewSuspense fallback={
+    //             <div role="status">
+    //                 <p className="text-center text-lg animate-pulse text-[#F71B0A]">
+    //                     Loading Preview Data...
+    //                 </p>
+    //             </div>
+    //         }>
+    //         <PreviewBlogList query={query} />
+    //         </PreviewSuspense>
+    //     )
+    // }
 
 
     return (
         <div>
             <div className="max-w-7xl mx-auto">
-                <BlogHeader />
+                {/*<BlogHeader />*/}
                 <BlogBanner />
             </div>
              <div className="max-w-7xl mx-auto">
