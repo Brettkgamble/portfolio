@@ -7,7 +7,7 @@ import { PortableText } from "@portabletext/react";
 import {RichTextComponents} from "../../../../../components/richtext/RichTextComponents";
 import Categories from '../../../../../components/blog/Categories';
 import PreviewSuspense from '../../../../../lib/PreviewSuspense';
-import { previewData } from "next/headers";
+// import { previewData } from "next/headers";
 import PreviewBlogPost from '../../../../../components/blog/PreviewBlogPost'
 
 import BlogHeader from '../../../../../components/headers/BlogHeader';
@@ -117,19 +117,19 @@ export default async function Post({ params: {slug}}: Props) {
     const post = await client.fetch(query, {slug} )
     const queryParams = { slug }
 
-        if (previewData()) {
-            return (
-                <PreviewSuspense fallback={
-                    <div role="status">
-                        <p className="text-center text-lg animate-pulse text-[#F71B0A]">
-                            Loading Preview Data...
-                        </p>
-                    </div>
-                }>
-                <PreviewBlogPost query={query} queryParams={queryParams}/>
-                </PreviewSuspense>
-            )
-         }
+        // if (previewData()) {
+        //     return (
+        //         <PreviewSuspense fallback={
+        //             <div role="status">
+        //                 <p className="text-center text-lg animate-pulse text-[#F71B0A]">
+        //                     Loading Preview Data...
+        //                 </p>
+        //             </div>
+        //         }>
+        //         <PreviewBlogPost query={query} queryParams={queryParams}/>
+        //         </PreviewSuspense>
+        //     )
+        //  }
 
     // const post = await client.fetch(query, {slug} )
     const categories = await client.fetch(categoryQuery)
