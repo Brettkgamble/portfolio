@@ -151,7 +151,7 @@ export default function Resume() {
                         />
                         <div className="flex pl-8 bg-white flex-col justify-center pt-8 text-black text-sm hover:text-blue-700">
                             <ol >
-                                <li>
+                                <li key={'linkedinUrl'} >
                                     <a
                                         href={person.linkedinurl.href.valueOf()}
                                         target="_blank"
@@ -259,7 +259,6 @@ export default function Resume() {
             </div>
             {person.organizations.map((org, id) => {
                 return (
-                    <>
                         <div key={id} className="flex flex-wrap pb-8 even:bg-blue-100">
                             <div className="hidden flex-none p-2 sm:flex  md:w-1/6"></div>
                             <div className="flex flex-col pt-3 pl-8 w-full justify-start text-black font-bold hover:text-blue-700 md:w-1/5 md:pl-4 lg:w-1/6">
@@ -332,9 +331,7 @@ export default function Resume() {
                             </div>
 
                             <div className="hidden flex-none p-2 sm:flex  md:w-1/6"></div>
-
                         </div>
-                    </>
                 )
             })}
 

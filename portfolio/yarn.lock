@@ -2346,10 +2346,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:13.3.5-canary.5":
-  version: 13.3.5-canary.5
-  resolution: "@next/env@npm:13.3.5-canary.5"
-  checksum: 874215d6edef66b931a67de21ec8f3a66bf9b75016f2c14eaba3f9f1f63f613bcb5bffeb94468ed4f9b981e00d6d6e8d40383ebcc3c31df07b4fdff6261f2089
+"@next/env@npm:13.4.1":
+  version: 13.4.1
+  resolution: "@next/env@npm:13.4.1"
+  checksum: 4736c9c6f75d80b16d3ca0ad3ddb3fcaa171f2144fccf516a67110e3bfcd9121d076e838faad46f815e41ee32e9be0ab68591359de06af13be6cbb860eda3639
   languageName: node
   linkType: hard
 
@@ -2362,72 +2362,65 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/font@npm:^13.1.6":
-  version: 13.1.6
-  resolution: "@next/font@npm:13.1.6"
-  checksum: 06499c9361d8ecf1bca47f20dfb226b6e9f77668afe967809cd8a4eade1b8620f9d723032098b2a0a9df2d2e2df96ad17e8128fcb7f494c99951ee8a61027966
-  languageName: node
-  linkType: hard
-
-"@next/swc-darwin-arm64@npm:13.3.5-canary.5":
-  version: 13.3.5-canary.5
-  resolution: "@next/swc-darwin-arm64@npm:13.3.5-canary.5"
+"@next/swc-darwin-arm64@npm:13.4.1":
+  version: 13.4.1
+  resolution: "@next/swc-darwin-arm64@npm:13.4.1"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:13.3.5-canary.5":
-  version: 13.3.5-canary.5
-  resolution: "@next/swc-darwin-x64@npm:13.3.5-canary.5"
+"@next/swc-darwin-x64@npm:13.4.1":
+  version: 13.4.1
+  resolution: "@next/swc-darwin-x64@npm:13.4.1"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:13.3.5-canary.5":
-  version: 13.3.5-canary.5
-  resolution: "@next/swc-linux-arm64-gnu@npm:13.3.5-canary.5"
+"@next/swc-linux-arm64-gnu@npm:13.4.1":
+  version: 13.4.1
+  resolution: "@next/swc-linux-arm64-gnu@npm:13.4.1"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:13.3.5-canary.5":
-  version: 13.3.5-canary.5
-  resolution: "@next/swc-linux-arm64-musl@npm:13.3.5-canary.5"
+"@next/swc-linux-arm64-musl@npm:13.4.1":
+  version: 13.4.1
+  resolution: "@next/swc-linux-arm64-musl@npm:13.4.1"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:13.3.5-canary.5":
-  version: 13.3.5-canary.5
-  resolution: "@next/swc-linux-x64-gnu@npm:13.3.5-canary.5"
+"@next/swc-linux-x64-gnu@npm:13.4.1":
+  version: 13.4.1
+  resolution: "@next/swc-linux-x64-gnu@npm:13.4.1"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:13.3.5-canary.5":
-  version: 13.3.5-canary.5
-  resolution: "@next/swc-linux-x64-musl@npm:13.3.5-canary.5"
+"@next/swc-linux-x64-musl@npm:13.4.1":
+  version: 13.4.1
+  resolution: "@next/swc-linux-x64-musl@npm:13.4.1"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:13.3.5-canary.5":
-  version: 13.3.5-canary.5
-  resolution: "@next/swc-win32-arm64-msvc@npm:13.3.5-canary.5"
+"@next/swc-win32-arm64-msvc@npm:13.4.1":
+  version: 13.4.1
+  resolution: "@next/swc-win32-arm64-msvc@npm:13.4.1"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:13.3.5-canary.5":
-  version: 13.3.5-canary.5
-  resolution: "@next/swc-win32-ia32-msvc@npm:13.3.5-canary.5"
+"@next/swc-win32-ia32-msvc@npm:13.4.1":
+  version: 13.4.1
+  resolution: "@next/swc-win32-ia32-msvc@npm:13.4.1"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:13.3.5-canary.5":
-  version: 13.3.5-canary.5
-  resolution: "@next/swc-win32-x64-msvc@npm:13.3.5-canary.5"
+"@next/swc-win32-x64-msvc@npm:13.4.1":
+  version: 13.4.1
+  resolution: "@next/swc-win32-x64-msvc@npm:13.4.1"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -7990,25 +7983,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:13.3.5-canary.5":
-  version: 13.3.5-canary.5
-  resolution: "next@npm:13.3.5-canary.5"
+"next@npm:13.4.1":
+  version: 13.4.1
+  resolution: "next@npm:13.4.1"
   dependencies:
-    "@next/env": 13.3.5-canary.5
-    "@next/swc-darwin-arm64": 13.3.5-canary.5
-    "@next/swc-darwin-x64": 13.3.5-canary.5
-    "@next/swc-linux-arm64-gnu": 13.3.5-canary.5
-    "@next/swc-linux-arm64-musl": 13.3.5-canary.5
-    "@next/swc-linux-x64-gnu": 13.3.5-canary.5
-    "@next/swc-linux-x64-musl": 13.3.5-canary.5
-    "@next/swc-win32-arm64-msvc": 13.3.5-canary.5
-    "@next/swc-win32-ia32-msvc": 13.3.5-canary.5
-    "@next/swc-win32-x64-msvc": 13.3.5-canary.5
+    "@next/env": 13.4.1
+    "@next/swc-darwin-arm64": 13.4.1
+    "@next/swc-darwin-x64": 13.4.1
+    "@next/swc-linux-arm64-gnu": 13.4.1
+    "@next/swc-linux-arm64-musl": 13.4.1
+    "@next/swc-linux-x64-gnu": 13.4.1
+    "@next/swc-linux-x64-musl": 13.4.1
+    "@next/swc-win32-arm64-msvc": 13.4.1
+    "@next/swc-win32-ia32-msvc": 13.4.1
+    "@next/swc-win32-x64-msvc": 13.4.1
     "@swc/helpers": 0.5.1
     busboy: 1.6.0
     caniuse-lite: ^1.0.30001406
     postcss: 8.4.14
     styled-jsx: 5.1.1
+    zod: 3.21.4
   peerDependencies:
     "@opentelemetry/api": ^1.1.0
     fibers: ">= 3.1.0"
@@ -8046,7 +8040,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 3f1d7ce9a65bd6a9ed48fd447b9e70e43ecc1973ef055683b907cc05534d1170937e9e5ff47f25d445dab26b21bcacac18300050001cbac597cda885ac45e0b4
+  checksum: 169e3fbbf713fad791a9b016c83d396bce628bb0ddf716c5fe50104a21cbc37af7df1586cbe05ae4ae6a090f4e1107211189cfbeeeab8345fe54e11cfefce87f
   languageName: node
   linkType: hard
 
@@ -8608,7 +8602,6 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@heroicons/react": ^2.0.14
-    "@next/font": ^13.1.6
     "@portabletext/react": ^2.0.1
     "@sanity/block-content-to-react": ^3.0.0
     "@sanity/cli": ^3.2.5
@@ -8630,7 +8623,7 @@ __metadata:
     eslint: 8.31.0
     eslint-config-next: 13.1.1
     globby: ^11.0.1
-    next: 13.3.5-canary.5
+    next: 13.4.1
     next-sanity: ^4.1.5
     next-sanity-image: ^5.0.0
     postcss: ^8.4.20
@@ -11269,5 +11262,12 @@ __metadata:
     compress-commons: ^4.1.0
     readable-stream: ^3.6.0
   checksum: 4a73da856738b0634700b52f4ab3fe0bf0a532bea6820ad962d0bda0163d2d5525df4859f89a7238e204a378384e12551985049790c1894c3ac191866e85887f
+  languageName: node
+  linkType: hard
+
+"zod@npm:3.21.4":
+  version: 3.21.4
+  resolution: "zod@npm:3.21.4"
+  checksum: f185ba87342ff16f7a06686767c2b2a7af41110c7edf7c1974095d8db7a73792696bcb4a00853de0d2edeb34a5b2ea6a55871bc864227dace682a0a28de33e1f
   languageName: node
   linkType: hard

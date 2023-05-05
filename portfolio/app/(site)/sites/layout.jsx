@@ -1,4 +1,4 @@
-import { Roboto_Mono } from '@next/font/google'
+import { Roboto_Mono } from 'next/font/google'
 import '../globals.css';
 
 import { AnalyticsWrapper } from "../../../components/analytics";

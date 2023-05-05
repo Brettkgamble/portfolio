@@ -1,4 +1,4 @@
-import { Inter } from '@next/font/google'
+import { Inter } from 'next/font/google'
 import {HiArrowRight } from 'react-icons/hi'
 import Image from 'next/image';
 import Link from 'next/link';
