@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import urlFor from "../../lib/urlFor";
-import { Source_Code_Pro} from 'next/font/google'
+import { Source_Code_Pro} from 'next/font/google';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 const source_code_pro= Source_Code_Pro({
     weight: '200',
@@ -23,11 +25,17 @@ export const RichTextComponents = {
             );
         },
         code: ( {value} : any) => {
+            // return (
+            //     <SyntaxHighlighter language="javascript" style={docco}>
+            //         {value.code}
+            //     </SyntaxHighlighter>
+            // )
+
             return (
-                <div className={source_code_pro.className}>
-                    <p className="text-white text-sm px-4 py-2 mx-6 my-4 bg-stone-700 rounded-xl">
+                    <div className={source_code_pro.className}>
+                    <pre className="text-white text-base px-4 py-2 mx-6 my-4 bg-stone-700 rounded-xl">
                         {value.code}
-                    </p>
+                    </pre>
                 </div>
             )
         }
