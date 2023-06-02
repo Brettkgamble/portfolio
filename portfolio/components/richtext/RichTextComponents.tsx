@@ -2,8 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import urlFor from "../../lib/urlFor";
 import { Source_Code_Pro} from 'next/font/google';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 const source_code_pro= Source_Code_Pro({
     weight: '200',
