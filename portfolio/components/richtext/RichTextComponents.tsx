@@ -2,7 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import urlFor from "../../lib/urlFor";
 import { Source_Code_Pro} from 'next/font/google';
-import Syntax from 'react-syntax-highlighter/dist/esm/highlight'
+import Syntax from 'react-syntax-highlighter/dist/esm/default-highlight';
+import agate from 'react-syntax-highlighter/dist/esm/styles/hljs/agate'
 
 const source_code_pro= Source_Code_Pro({
     weight: '200',
@@ -25,7 +26,7 @@ export const RichTextComponents = {
         },
         code: ( {value} : any) => {
             return (
-                <Syntax language="javascript">
+                <Syntax language="javascript" style={agate}>
                     {value.code}
                 </Syntax>
             )
