@@ -1,14 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import urlFor from "../../lib/urlFor";
-import { Source_Code_Pro} from 'next/font/google';
 import Syntax from 'react-syntax-highlighter/dist/esm/default-highlight';
 import agate from 'react-syntax-highlighter/dist/esm/styles/hljs/agate'
-
-const source_code_pro= Source_Code_Pro({
-    weight: '200',
-    subsets: ['latin']
-})
 
 export const RichTextComponents = {
     types: {
@@ -30,14 +24,6 @@ export const RichTextComponents = {
                     {value.code}
                 </Syntax>
             )
-
-            // return (
-            //         <div className={source_code_pro.className}>
-            //         <pre className="text-white text-base px-4 py-2 mx-6 my-4 bg-stone-700 rounded-xl">
-            //             {value.code}
-            //         </pre>
-            //     </div>
-            // )
         }
     },
     list: {
