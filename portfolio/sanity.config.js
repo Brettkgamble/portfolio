@@ -16,7 +16,7 @@ export default defineConfig({
   basePath: "/studio",
   name: "portfolio",
   title: "Brett Gamble Portfolio",
-  projectId, //: "52vufthe",
+  projectId, //:
   dataset, // : "production",
   plugins: [deskTool({
     defaultDocumentNode:  getDefaultDocumentNode,
