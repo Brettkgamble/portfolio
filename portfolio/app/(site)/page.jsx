@@ -10,7 +10,7 @@ export default function Home() {
             <div className="grid grid-cols-12 lg:mt-16">
                 <div className="col-span-12 pl-8 pt-8 pb-8 sm:pl-16 md:pl-32 lg:pl-48">
                     <span className={inter.className}>
-                        <span className="inline-block"> My stack is <span className="inline-block align-middle"><HiArrowRight /></span></span>
+                        <span className="inline-block">My stack is <span className="inline-block align-middle"><HiArrowRight /></span></span>
                     </span>
                 </div>
                 <div className="col-span-12 text-center mt-12 md:col-span-6 lg:col-span-3 xl:col-start-2 xl:col-span-2">
