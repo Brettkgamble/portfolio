@@ -115,7 +115,7 @@ function urlFor(source) {
     return builder.image(source)
 }
 
-export { CV_meta_data as metadata } from '../../../components/metadata/CV_metadata';
+// export { CV_meta_data as metadata } from '../../../components/metadata/CV_metadata';
 
 
 export default function Resume() {
