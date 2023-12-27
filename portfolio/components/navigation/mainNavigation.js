@@ -72,10 +72,17 @@ export default function MainNavigation(props) {
                                        </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
-                                      <Link
+                                       <Link
                                            href="/sites"
                                        >
                                            Sites
+                                       </Link>
+                                   </li>
+                                   <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
+                                       <Link
+                                           href="/projects"
+                                       >
+                                           Projects
                                        </Link>
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 text-center hover:font-bold">
@@ -90,10 +97,10 @@ export default function MainNavigation(props) {
                        </div>
                    </section>
                </div>
-                   {/* Full Screen */}
-                   <div className="flex hidden md:flex">
-                       <nav className="flex relative h-14 w-full items-center pl-2 pr-2">
-                           <div className="flex flex-col items-center max-w-1100 lg:items-start p-6">
+               {/* Full Screen */}
+               <div className="flex hidden md:flex">
+                   <nav className="flex relative h-14 w-full items-center pl-2 pr-2">
+                       <div className="flex flex-col items-center max-w-1100 lg:items-start p-6">
                                <div className="lg:border lg:rounded-xl lg:border-callout-border-rgb lg:px-4 lg:py-4">
                                    <p className="font-mono text-white">
                                        Website and Application Development by Brett Gamble&nbsp;
@@ -132,6 +139,13 @@ export default function MainNavigation(props) {
                                    </li>
                                    <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 hover:font-bold">
                                        <Link
+                                           href="/projects"
+                                       >
+                                           Projects
+                                       </Link>
+                                   </li>
+                                   <li className="border-0 rounded-lg border-slate-500 p-1 list-none mt-0 ml-2 mb-0 mr-2 hover:font-bold">
+                                       <Link
                                            href="/contact"
                                        >
                                            Contact
@@ -139,10 +153,10 @@ export default function MainNavigation(props) {
                                    </li>
                                </ul>
                            </div>
-                       </nav>
-                   </div>
-                   <style>
-                       {`
+                   </nav>
+               </div>
+               <style>
+                   {`
                           .hideMenuNav {
                             display: none;
                           }

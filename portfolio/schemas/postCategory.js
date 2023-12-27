@@ -21,7 +21,7 @@ export default {
      name: 'seoDescription',
      title: 'SEO Description',
      type: 'string',
-     description: 'Example: Car Detailing Projects'
+     description: 'Example: Car Detailing projects'
     },
     {
       name: 'description',
